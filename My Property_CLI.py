@@ -1,3 +1,6 @@
+import os 
+os.system('cls')
+
 print('''
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Selamat Datang Di My Property
@@ -12,7 +15,7 @@ Pilihan menu :
 [5] Keluar 
 \n''')
 
-from perbarui_data import Login
+from perbarui_data import Perbarui_data
 menu = int(input('Masukkan pilihan Menu = '))
 
 if menu == 1 :
@@ -30,7 +33,8 @@ elif menu == 3 :
 elif menu == 4 :
     #Program Perbarui Data 
     
-    login = Login.login_akun()
+    login = Perbarui_data.login_akun()
+     
     print('Perbarui Harga') 
 else :
     #Program Selesai
