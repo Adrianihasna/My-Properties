@@ -1,4 +1,41 @@
+#Login
 import csv
+def login_akun() :
+    akun =[]
+    with open('perbarui_data\Akun.csv') as csv_file :
+        csv_reader = csv.reader(csv_file, delimiter=';')
+        for i in csv_reader:
+            akun.append(i)
+    label = akun.pop(0)
+
+    username = input('Masukkan Username = ')
+    password = input('Masukkan Password = ')
+
+    for i in range(len(akun)) :
+        if username == akun[i][0] :
+            if password == akun[i][1] :
+                print('Login Berhasil')
+            else :
+                print('Password Yang Anda Masukkan Salah')
+            break
+    if username != akun[i][0] :
+         print('Username Tidak Tersedia')
+    return
+
+def pilihan():
+    print('''
+    Silahkan Masukkan Pilihan Menu :
+
+    [1] Tambah Data
+    [2] Perbarui Data
+    [3] Hapus Data
+    
+    ''')
+    pilih = int(input('Masukkan Pilihan '))
+    
+
+
+# Perbarui Data
 def tambah_data():
     material = input('Masukkan Nama Material \t= ')
     harga =  float(input('Masukkan Harga \t\t= '))
