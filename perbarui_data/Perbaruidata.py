@@ -40,3 +40,5 @@ def update_data() :
     print('-'*62)
     print(tabulate(daftar_harga, headers = ['MATERIAL', 'HARGA', 'KETERANGAN' ], tablefmt='orgtbl'))
     return
+
+tambah_data()
