@@ -11,4 +11,4 @@ elif harga_yang_dicari >= Tipe_A and harga_yang_dicari <= Tipe_B :
 elif harga_yang_dicari >= Tipe_B and harga_yang_dicari <= Tipe_C:
     print("Tipe Rumah : C")
 else:
-    print("Tipe rumah dengan harga tersebut tidak tersedia")
+    print("Tipe rumah dengan harga yang anda cari belum tersedia")
