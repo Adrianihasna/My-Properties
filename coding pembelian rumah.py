@@ -12,3 +12,5 @@ elif harga_yang_dicari >= Tipe_B and harga_yang_dicari <= Tipe_C:
     print("Tipe Rumah : C")
 else:
     print("Tipe rumah dengan harga yang anda cari belum tersedia")
+
+pembelian = input("Apakah Anda ingin melakukan pembelian? (Ya/Tidak): ")
