@@ -10,17 +10,17 @@ def hitung_biaya_renovasi(panjang, lebar, tinggi):
 
 def main():
     print('''
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Program Estimasi Renovasi Rumah
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Program Estimasi Renovasi Rumah
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Pilihan Ruangan :
+Pilihan Ruangan :
 
-    [1] Kamar Tidur
-    [2] Ruang Tamu
-    [3] Kamar Mandi
-    [4] Dapur 
-    [5] Teras
+[1] Kamar Tidur
+[2] Ruang Tamu
+[3] Kamar Mandi
+[4] Dapur 
+[5] Teras
     \n''')
 
 
@@ -46,5 +46,7 @@ def main():
     biaya_renovasi = hitung_biaya_renovasi(panjang_ruangan, lebar_ruangan, tinggi_ruangan)
     print("Estimasi biaya renovasi", ruangan, "adalah: Rp", biaya_renovasi)
 
-if __name__ == '__main__':
-    main()
+
+def run():
+    if __name__ == '__main__':
+        main()

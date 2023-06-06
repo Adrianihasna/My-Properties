@@ -2,7 +2,7 @@
 import csv
 def login_akun() :
     akun =[]
-    with open('perbarui_data\Akun.csv') as csv_file :
+    with open('My-Property\perbarui_data\Akun.csv') as csv_file :
         csv_reader = csv.reader(csv_file, delimiter=';')
         for i in csv_reader:
             akun.append(i)
@@ -15,6 +15,7 @@ def login_akun() :
         if username == akun[i][0] :
             if password == akun[i][1] :
                 print('Login Berhasil')
+                pilihan()
             else :
                 print('Password Yang Anda Masukkan Salah')
             break
@@ -22,17 +23,30 @@ def login_akun() :
          print('Username Tidak Tersedia')
     return
 
+#Memilih Program
 def pilihan():
     print('''
-    Silahkan Masukkan Pilihan Menu :
 
-    [1] Tambah Data
-    [2] Perbarui Data
-    [3] Hapus Data
+Silahkan Masukkan Pilihan Menu :
+
+[1] Tambah Data
+[2] Perbarui Data
+[3] Hapus Data
+[4] Keluar
     
     ''')
-    pilih = int(input('Masukkan Pilihan '))
-    
+    pilih = int(input('Masukkan Pilihan = '))
+    if pilih == 1 :
+        tambah_data()
+    elif pilih == 2 : 
+        update_data()
+    elif pilih == 3 :
+        hapus_data()
+    elif pilih == 4 :
+        print('keluar')
+    else : 
+        pilihan()
+    return
 
 
 # Perbarui Data
@@ -44,6 +58,13 @@ def tambah_data():
     data = open('My-Property\perbarui_data\DATA_MATERIAL.csv','a')
     data.write(tambah)
     data.close()
+    print('Data Berhasil Ditambahkan ')
+    lagi = input('Tambah Data Lagi (ya/tidak) = ')
+    lagi.lower()
+    if lagi == 'ya' :
+        tambah_data()
+    else :
+        pilihan()
     return
 
 def hapus_data():
@@ -55,7 +76,7 @@ def hapus_data():
             daftar_harga.append(i)
     daftar_harga.pop(0)
     print('\n\t\t  DAFTAR HARGA MATERIAL ')
-    print('-'*62)
+    print('-'*67)
     print(tabulate(daftar_harga, headers = ['MATERIAL', 'HARGA', 'KETERANGAN' ], tablefmt='orgtbl'))
     
     # nama = input('Masukkan Nama Material yang ingin dihapus = ')
@@ -63,6 +84,7 @@ def hapus_data():
     #     if nama == daftar_harga[0] :
     #         print(f'Harga {nama} berhasil dihapus ')
     #     print(i)
+    pilihan()
     return
 
 def update_data() :
@@ -76,6 +98,5 @@ def update_data() :
     print('\n\t\t  DAFTAR HARGA MATERIAL ')
     print('-'*62)
     print(tabulate(daftar_harga, headers = ['MATERIAL', 'HARGA', 'KETERANGAN' ], tablefmt='orgtbl'))
+    pilihan()
     return
-
-tambah_data()
