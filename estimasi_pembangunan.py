@@ -1,10 +1,10 @@
-#halaman pertama menampilkan pemilihan tipe pembangunan
+
 def tampilkan_tipe_pembangunan():
     print("Memilih tipe pembangunan")
     print("1. Gor")
     print("2. Aula")
     print("3. Rumah Satu Lantai")
-    # Halaman selanjutnya memasukan kriteria dan luas tanah yang diinginkan dan proses perhitungan
+    
     kriteria = input("Masukkan kode kriteria yang ingin dipilih (1/2/3): ")
     luas_tanah = float(input("Masukkan luas tanah (dalam meter persegi): "))
     if kriteria == "1":
@@ -16,6 +16,7 @@ def tampilkan_tipe_pembangunan():
     else:
         print("Kriteria yang dimasukkan tidak valid.")
         exit()
+        
     # Estimasi biaya konstruksi
     biaya_konstruksi = luas_tanah * harga_bahan_bangunan_per_m2
     # Estimasi biaya lainnya (biaya perizinan, biaya cadangan, dll)

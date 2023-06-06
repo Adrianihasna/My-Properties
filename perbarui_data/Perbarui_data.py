@@ -35,24 +35,30 @@ Silahkan Masukkan Pilihan Menu :
 [4] Keluar
     
     ''')
-    pilih = int(input('Masukkan Pilihan = '))
-    if pilih == 1 :
-        tambah_data()
-    elif pilih == 2 : 
-        update_data()
-    elif pilih == 3 :
-        hapus_data()
-    elif pilih == 4 :
-        print('keluar')
-    else : 
+    
+    try : 
+        pilih = int(input('Masukkan Pilihan = '))
+    except ValueError :
+        print('Nilai Yang Anda Masukkan Salah')
         pilihan()
+    else:
+        if pilih == 1 :
+            tambah_data()
+        elif pilih == 2 : 
+            update_data()
+        elif pilih == 3 :
+            hapus_data()
+        elif pilih == 4 :
+            print('keluar')
+        else : 
+            pilihan()
     return
 
 
 # Perbarui Data
 def tambah_data():
     material = input('Masukkan Nama Material \t= ')
-    harga =  float(input('Masukkan Harga \t\t= '))
+    harga =  int(input('Masukkan Harga \t\t= '))
     keterangan = input('Masukkan Keterangan \t= ')
     tambah = '\n{},{},{}'.format(material,harga,keterangan)
     data = open('My-Property\perbarui_data\DATA_MATERIAL.csv','a')

@@ -1,6 +1,15 @@
+import csv
+
 def hitung_biaya_renovasi(panjang, lebar, tinggi):
-    harga_cat_per_meter = 10 
-    harga_lantai_per_meter = 20 
+    harga = []
+    with open('My-Property\perbarui_data\DATA_MATERIAL.csv') as data :
+        data = csv.reader(data,delimiter=',')
+        for i in data :
+            harga.append(i)
+    header = harga.pop(0)
+    
+    harga_cat_per_meter = 30
+    harga_lantai_per_meter = 20
 
     luas_dinding = 2 * (panjang + lebar) * tinggi
     luas_lantai = panjang * lebar
@@ -50,3 +59,4 @@ Pilihan Ruangan :
 def run():
     if __name__ == '__main__':
         main()
+main()
