@@ -39,7 +39,7 @@ def utama():
             utama()
         elif menu == 2 :
             # Program Estimasi Renovasi Rumah
-            renov = renov.main()
+            renovasi = renov.main()
             beranda()
             utama()
         elif menu == 3 :

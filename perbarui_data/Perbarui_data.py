@@ -106,3 +106,5 @@ def update_data() :
     print(tabulate(daftar_harga, headers = ['     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl'))
     pilihan()
     return
+
+tambah_data()
