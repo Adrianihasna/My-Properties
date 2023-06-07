@@ -1,7 +1,8 @@
 import os 
 from perbarui_data import Perbarui_data
-import renovasi as r
-import estimasi_pembangunan as es
+import renovasi as renov
+import estimasi_pembangunan as estimasi
+import pembelian_rumah as beli 
 
 os.system('cls')
 
@@ -23,7 +24,6 @@ Pilihan menu :
 
 
 def utama():
-    
     try :
         menu = int(input('Masukkan pilihan Menu = '))
     except ValueError :
@@ -34,17 +34,18 @@ def utama():
             menu = int(input('Masukkan pilihan Menu = '))
         if menu == 1 :
             #Program Estimasi Pembangunan Rumah
-            estimasi = es.tampilkan_tipe_pembangunan()
+            estimasi = estimasi.tampilkan_tipe_pembangunan()
             beranda()
             utama()
         elif menu == 2 :
             # Program Estimasi Renovasi Rumah
-            renov = r.main()
+            renov = renov.main()
             beranda()
             utama()
         elif menu == 3 :
             #Program Pembelian Rumah
             print('Pembelian rumah')
+            pembelian = beli.beli()
             beranda()
             utama()
         elif menu == 4 :
@@ -54,7 +55,7 @@ def utama():
             utama()
         elif menu == 5:
             #Program Selesai
-            print('Keluar')
+            print('\nTERIMA KASIH SUDAH MENGGUNAKAN PROGRAM')
         else : 
             print('Mohon Masukkan Pilihan Sesuai Menu')
 

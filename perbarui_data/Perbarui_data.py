@@ -14,20 +14,20 @@ def login_akun() :
     for i in range(len(akun)) :
         if username == akun[i][0] :
             if password == akun[i][1] :
-                print('Login Berhasil')
+                print('\nLOGIN BERHASIL')
                 pilihan()
             else :
-                print('Password Yang Anda Masukkan Salah')
+                print('\nPassword Yang Anda Masukkan Salah')
             break
     if username != akun[i][0] :
-         print('Username Tidak Tersedia')
+         print('\nUsername Tidak Tersedia')
     return
 
 #Memilih Program
 def pilihan():
     print('''
 
-Silahkan Masukkan Pilihan Menu :
+Silahkan Pilih Menu :
 
 [1] Tambah Data
 [2] Perbarui Data
@@ -81,9 +81,9 @@ def hapus_data():
         for i in daftar :
             daftar_harga.append(i)
     daftar_harga.pop(0)
-    print('\n\t\t  DAFTAR HARGA MATERIAL ')
-    print('-'*67)
-    print(tabulate(daftar_harga, headers = ['MATERIAL', 'HARGA', 'KETERANGAN' ], tablefmt='orgtbl'))
+    print('\n\t\t\t  DAFTAR HARGA MATERIAL ')
+    print('-'*73)
+    print(tabulate(daftar_harga, headers = ['     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl'))
     
     # nama = input('Masukkan Nama Material yang ingin dihapus = ')
     # for i in daftar_harga :
@@ -101,8 +101,8 @@ def update_data() :
         for i in daftar :
             daftar_harga.append(i)
     daftar_harga.pop(0)
-    print('\n\t\t  DAFTAR HARGA MATERIAL ')
-    print('-'*62)
-    print(tabulate(daftar_harga, headers = ['MATERIAL', 'HARGA', 'KETERANGAN' ], tablefmt='orgtbl'))
+    print('\n\t\t\t  DAFTAR HARGA MATERIAL ')
+    print('-'*73) 
+    print(tabulate(daftar_harga, headers = ['     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl'))
     pilihan()
     return

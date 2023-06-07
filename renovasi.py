@@ -8,8 +8,8 @@ def hitung_biaya_renovasi(panjang, lebar, tinggi):
             harga.append(i)
     header = harga.pop(0)
     
-    harga_cat_per_meter = 30
-    harga_lantai_per_meter = 20
+    harga_cat_per_meter = int(harga[7][1])
+    harga_lantai_per_meter = int(harga[8][1])
 
     luas_dinding = 2 * (panjang + lebar) * tinggi
     luas_lantai = panjang * lebar
@@ -30,15 +30,15 @@ Pilihan Ruangan :
 [3] Kamar Mandi
 [4] Dapur 
 [5] Teras
+
     \n''')
 
-
-    pilihan_ruangan = int(input("Silakan pilih ruangan yang akan direnovasi (1/2/3/4/5): "))
+    pilihan_ruangan = input("Silakan pilih ruangan yang akan direnovasi (1/2/3/4/5): ")
     panjang_ruangan = float(input("Masukkan panjang ruangan (meter): "))
     lebar_ruangan = float(input("Masukkan lebar ruangan (meter): "))
     tinggi_ruangan = float(input("Masukkan tinggi ruangan (meter): "))
 
-    if pilihan_ruangan == 1:
+    if pilihan_ruangan == '1':
         ruangan = "Kamar Tidur"
     elif pilihan_ruangan == 2:
         ruangan = "Ruang Tamu"
@@ -59,4 +59,3 @@ Pilihan Ruangan :
 def run():
     if __name__ == '__main__':
         main()
-main()
