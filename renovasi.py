@@ -21,24 +21,6 @@ Pilihan Ruangan :
     lebar = float(input("Masukkan lebar ruangan (meter): "))
     tinggi = float(input("Masukkan tinggi ruangan (meter): "))
 
-    if pilihan_ruangan == '1':
-        ruangan = "Kamar Tidur"
-        biaya_renovasi = total_biaya_kamar_tidur
-    elif pilihan_ruangan == '2':
-        ruangan = "Ruang Tamu"
-        biaya_renovasi = total_biaya_ruang_tamu
-    elif pilihan_ruangan == '3':
-        ruangan = "Kamar Mandi"
-        biaya_renovasi = total_biaya_kamar_mandi
-    elif pilihan_ruangan == '4':
-        ruangan = "Dapur"
-        biaya_renovasi = total_biaya_dapur
-    elif pilihan_ruangan == '5':
-        ruangan = "Teras"
-        biaya_renovasi = total_biaya_teras
-    else:
-        print("Pilihan ruangan tidak valid.")
-
     harga = []
     with open('My-Property\perbarui_data\DATA_MATERIAL.csv') as data :
         data = csv.reader(data,delimiter=',')
@@ -59,9 +41,28 @@ Pilihan Ruangan :
 
     total_biaya_kamar_tidur = (luas_dinding * harga_cat_per_meter) + (luas_lantai * harga_lantai_per_meter) + (luas_lantai * harga_semen) + (luas_lantai * harga_pasir) + (luas_lantai * harga_nat)
     total_biaya_ruang_tamu = (luas_dinding * harga_cat_per_meter) + (luas_lantai * harga_lantai_per_meter) + (luas_lantai * harga_semen) + (luas_lantai * harga_pasir) + (luas_lantai * harga_nat)
-    total_biaya_kamar_mandi = 1/3(luas_dinding * harga_cat_per_meter) + 2/3(luas_dinding * harga_dinding_Keramik_per_meter) + (luas_lantai * harga_lantaiKM_per_meter) + (luas_lantai * harga_semen) + (luas_lantai * harga_pasir) + (luas_lantai * harga_nat)
+    total_biaya_kamar_mandi = (1/3)*(luas_dinding * harga_cat_per_meter) + (2/3)*(luas_dinding * harga_dinding_Keramik_per_meter) + (luas_lantai * harga_lantaiKM_per_meter) + (luas_lantai * harga_semen) + (luas_lantai * harga_pasir) + (luas_lantai * harga_nat)
     total_biaya_dapur = (luas_dinding * harga_cat_per_meter) + (luas_lantai * harga_lantai_per_meter) + (luas_lantai * harga_semen) + (luas_lantai * harga_pasir) + (luas_lantai * harga_nat)
     total_biaya_teras = (panjang * tinggi * harga_cat_per_meter) + (luas_lantai * harga_lantai_per_meter) + (luas_lantai * harga_semen) + (luas_lantai * harga_pasir) + (luas_lantai * harga_nat)
+    
+    if pilihan_ruangan == '1':
+        ruangan = "Kamar Tidur"
+        biaya_renovasi = total_biaya_kamar_tidur
+    elif pilihan_ruangan == '2':
+        ruangan = "Ruang Tamu"
+        biaya_renovasi = total_biaya_ruang_tamu
+    elif pilihan_ruangan == '3':
+        ruangan = "Kamar Mandi"
+        biaya_renovasi = total_biaya_kamar_mandi
+    elif pilihan_ruangan == '4':
+        ruangan = "Dapur"
+        biaya_renovasi = total_biaya_dapur
+    elif pilihan_ruangan == '5':
+        ruangan = "Teras"
+        biaya_renovasi = total_biaya_teras
+    else:
+        print("Pilihan ruangan tidak valid.")
+
     
     print("Estimasi biaya renovasi", ruangan, "adalah: Rp", biaya_renovasi)
 
@@ -109,4 +110,3 @@ def run():
     if __name__ == '__main__':
         main()
 
-run()
