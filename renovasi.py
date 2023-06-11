@@ -139,7 +139,7 @@ def RAB_KM():
     return data_Kamar_Mandi
     
 def RAB_KT_RT_Dapur():
-    data_KT_RT_Dapur = [["Rincian", "        Biaya        "],
+    data_KT_RT_Dapur = [["Rincian", "         Biaya         "],
                         ["Harga Cat", hitung_biaya_cat(luas_dinding, harga_cat_per_meter)],
                         ["Harga Lantai", hitung_biaya_lantai(luas_lantai, harga_lantai_per_meter)],
                         ["Semen ", hitung_biaya_semen(luas_lantai, harga_semen)],
