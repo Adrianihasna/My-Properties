@@ -1,5 +1,8 @@
 #Login
 import csv
+import pandas as pd
+import os
+
 def login_akun() :
     akun =[]
     with open('My-Property\perbarui_data\Akun.csv') as csv_file :
@@ -49,7 +52,7 @@ Silahkan Pilih Menu :
         elif pilih == 3 :
             hapus_data()
         elif pilih == 4 :
-            print('keluar')
+            print()
         else : 
             pilihan()
     return
@@ -57,14 +60,17 @@ Silahkan Pilih Menu :
 
 # Perbarui Data
 def tambah_data():
+    os.system('cls')
     material = input('Masukkan Nama Material \t= ')
     harga =  int(input('Masukkan Harga \t\t= '))
     keterangan = input('Masukkan Keterangan \t= ')
+
     tambah = '\n{},{},{}'.format(material,harga,keterangan)
     data = open('My-Property\perbarui_data\DATA_MATERIAL.csv','a')
     data.write(tambah)
     data.close()
     print('Data Berhasil Ditambahkan ')
+
     lagi = input('Tambah Data Lagi (ya/tidak) = ')
     lagi.lower()
     if lagi == 'ya' :
@@ -75,22 +81,40 @@ def tambah_data():
 
 def hapus_data():
     from tabulate import tabulate
-    daftar_harga = []
-    with open('My-Property\perbarui_data\DATA_MATERIAL.csv') as daftar :
-        daftar = csv.reader(daftar,delimiter=',')
-        for i in daftar :
-            daftar_harga.append(i)
-    daftar_harga.pop(0)
-    print('\n\t\t\t  DAFTAR HARGA MATERIAL ')
-    print('-'*73)
-    print(tabulate(daftar_harga, headers = ['     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl'))
-    
-    # nama = input('Masukkan Nama Material yang ingin dihapus = ')
-    # for i in daftar_harga :
-    #     if nama == daftar_harga[0] :
-    #         print(f'Harga {nama} berhasil dihapus ')
-    #     print(i)
-    pilihan()
+    os.system('cls')
+
+    daftar = pd.read_csv('My-Property\perbarui_data\DATA_MATERIAL.csv')
+    print('~'*34,'DATA MATERIAL','~'*34)
+    print()
+    print('-'*83)
+    print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl' )) 
+    print('-'*83)
+    print()
+    try :
+        hapus = int(input("Masukkan no indeks yang ingin dihapus = "))
+    except ValueError :
+        print('Mohon Masukkan Angka Sesuai Indeks')
+        hapus_data()
+    except KeyError :
+        print('Mohon Masukkan Angka Sesuai Indeks')
+    else : 
+        print()
+        daftar.drop(index=hapus,
+                    inplace=True)
+        daftar.reset_index(drop=True,
+                    inplace=True)
+        print('~'*32,'DAFTAR HARGA BARU','~'*32)
+        print()
+        print('-'*83)
+        print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl' )) 
+        print('-'*83)
+
+    hapus_lagi = input('\nApakah Anda Ingin Menghapus Data Lagi (ya/tidak) ')
+    hapus_lagi.lower()
+    if hapus_lagi == 'ya':
+        hapus_data
+    else :
+        pilihan()
     return
 
 def update_data() :
@@ -106,5 +130,3 @@ def update_data() :
     print(tabulate(daftar_harga, headers = ['     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl'))
     pilihan()
     return
-
-tambah_data()
