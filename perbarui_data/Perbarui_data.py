@@ -87,7 +87,7 @@ def hapus_data():
     print('~'*34,'DATA MATERIAL','~'*34)
     print()
     print('-'*83)
-    print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl' )) 
+    print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='grid' )) 
     print('-'*83)
     print()
     try :
@@ -96,37 +96,39 @@ def hapus_data():
         print('Mohon Masukkan Angka Sesuai Indeks')
         hapus_data()
     except KeyError :
-        print('Mohon Masukkan Angka Sesuai Indeks')
+        hapus_data()
     else : 
         print()
         daftar.drop(index=hapus,
                     inplace=True)
+        daftar.to_csv('My-Property\perbarui_data\DATA_MATERIAL.csv',index= False)
         daftar.reset_index(drop=True,
                     inplace=True)
         print('~'*32,'DAFTAR HARGA BARU','~'*32)
         print()
-        print('-'*83)
-        print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl' )) 
-        print('-'*83)
+        print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='grid' )) 
+        
 
     hapus_lagi = input('\nApakah Anda Ingin Menghapus Data Lagi (ya/tidak) ')
     hapus_lagi.lower()
     if hapus_lagi == 'ya':
-        hapus_data
+        hapus_data()
     else :
         pilihan()
     return
 
 def update_data() :
     from tabulate import tabulate
-    daftar_harga = []
-    with open('My-Property\perbarui_data\DATA_MATERIAL.csv') as daftar :
-        daftar = csv.reader(daftar,delimiter=',')
-        for i in daftar :
-            daftar_harga.append(i)
-    daftar_harga.pop(0)
-    print('\n\t\t\t  DAFTAR HARGA MATERIAL ')
-    print('-'*73) 
-    print(tabulate(daftar_harga, headers = ['     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='orgtbl'))
-    pilihan()
+    os.system('cls')
+
+    daftar = pd.read_csv('My-Property\perbarui_data\DATA_MATERIAL.csv')
+    print('~'*34,'DATA MATERIAL','~'*34)
+    print()
+    print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='grid' )) 
+    print()
+    # nama_data = int(input('Masukkan Indeks Nama Material Yang Ingin Diganti = '))
+    # harga_baru = int(input('Masukkan Harga Baru = '))
+    # daftar[nama_data][1] = daftar[nama_data][1].replace([daftar][1],[harga_baru])
+    # print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='grid' )) 
+    
     return
