@@ -1,7 +1,7 @@
 import os 
 from perbarui_data import Perbarui_data
 import renovasi as renov
-import estimasi_pembangunan as estimasi
+import estimasibangun as estimasi
 import pembelian_rumah as beli 
 
 os.system('cls')
@@ -14,7 +14,7 @@ Selamat Datang Di My Property
 
 Pilihan menu :
 
-[1] Estimasi Pembangunan Rumah 
+[1] Estimasi Pembangunan 
 [2] Estimasi Renovasi Rumah 
 [3] Pembelian Rumah 
 [4] Perbarui Harga 
@@ -34,7 +34,7 @@ def utama():
             menu = int(input('Masukkan pilihan Menu = '))
         if menu == 1 :
             #Program Estimasi Pembangunan Rumah
-            estimasi = estimasi.tampilkan_tipe_pembangunan()
+            estimasi_pembangunan = estimasi.main()
             beranda()
             utama()
         elif menu == 2 :

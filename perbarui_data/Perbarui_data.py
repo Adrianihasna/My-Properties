@@ -95,8 +95,6 @@ def hapus_data():
     except ValueError :
         print('Mohon Masukkan Angka Sesuai Indeks')
         hapus_data()
-    except KeyError :
-        hapus_data()
     else : 
         print()
         daftar.drop(index=hapus,
@@ -117,18 +115,3 @@ def hapus_data():
         pilihan()
     return
 
-def update_data() :
-    from tabulate import tabulate
-    os.system('cls')
-
-    daftar = pd.read_csv('My-Property\perbarui_data\DATA_MATERIAL.csv')
-    print('~'*34,'DATA MATERIAL','~'*34)
-    print()
-    print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='grid' )) 
-    print()
-    # nama_data = int(input('Masukkan Indeks Nama Material Yang Ingin Diganti = '))
-    # harga_baru = int(input('Masukkan Harga Baru = '))
-    # daftar[nama_data][1] = daftar[nama_data][1].replace([daftar][1],[harga_baru])
-    # print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='grid' )) 
-    
-    return
