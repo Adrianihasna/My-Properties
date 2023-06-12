@@ -1,59 +1,201 @@
-def beli():
-    Tipe_A = 300000000  # 300 juta
-    Tipe_B = 600000000  # 600 juta
-    Tipe_C = 1000000000  # 1 milyar
+import os
+import pandas as pd 
+from tabulate import tabulate
 
-    harga_yang_dicari = int(input("Masukkan harga rumah yang Anda cari (Rupiah): "))
+def beli() :
+    os.system('cls')    
+    global Tipe_21
+    global Tipe_36
+    global Tipe_45
+    global Tipe_54
+    global Tipe_60
+    global Tipe_70
+    global Tipe_120
+    global tipe_rumah
 
-    if harga_yang_dicari <= Tipe_A:
-        print("Tipe Rumah : A")
-        return "A"
-    elif harga_yang_dicari >= Tipe_A and harga_yang_dicari <= Tipe_B :
-        print("Tipe Rumah : B")
-        return "B"
-    elif harga_yang_dicari >= Tipe_B and harga_yang_dicari <= Tipe_C :
-        print("Tipe Rumah : C")
-        return "C"
+    print('''
+    Pilihan Range Harga :
+
+    [1] < 300.000.000 (300 juta)
+    [2] 300.000.000 - 600.000.000
+    [3] 600.000.000 - 1.000.000.000
+    [4] >1.000.000.000
+    [5] Keluar
+    ''')
+    tipe = input('Masukkan Pilihan Range = ')
+    if tipe == '1' :
+        os.system('cls') 
+        print('\nRumah Dengan Range 0 - 300.000.000 : ')
+        tipe21()
+    elif tipe == '2' :
+        os.system('cls') 
+        print('\nRumah Dengan Range 300.000.000 - 600.000.000 : ')
+        tipe36()
+    elif tipe == '3' :
+        os.system('cls') 
+        print('\nRumah Dengan Range 600.000.000 - 1.000.000.000 : ')
+        tipe45()
+        tipe54()
+    elif tipe == '4' :
+        os.system('cls') 
+        print('\nRumah Dengan Range lebih dari 1.000.000.000 : ')
+        tipe60()
+        tipe70()
+        tipe120()
+    elif tipe == '5':
+        print()
+    else :
+        beli()
+
+    pembelian = input('Lakukan Pembelian (ya/tidak) = ')
+    pembelian.lower()
+    if pembelian == "ya":
+        print('''
+        TIPE RUMAH :
+
+        [1] TIPE 21
+        [2] TIPE 36
+        [3] TIPE 45
+        [4] TIPE 54
+        [5] TIPE 60
+        [6] TIPE 70
+        [7] TIPE 120
+
+        ''')
+        hitung_biaya_pajak()
+        pilih_tipe = input('Masukkan Tipe Rumah yang ingin Dibeli = ')
+        if pilih_tipe == '1' :
+            Tipe_21 = 250_000_000
+            tipe_rumah = 'Tipe_21'
+            metode_pembayaran()
+        elif pilih_tipe == '2' :
+            Tipe_36 = 500_000_000
+            tipe_rumah = 'Tipe_36'
+            metode_pembayaran()
+        elif pilih_tipe == '3' :
+            Tipe_45 = 700_000_000
+            tipe_rumah = 'Tipe_45'
+            metode_pembayaran()
+        elif pilih_tipe == '4' :
+            Tipe_54 = 900_000_000
+            tipe_rumah = 'Tipe_54'
+            metode_pembayaran()
+        elif pilih_tipe == '5' :
+            Tipe_60 = 1_000_000_000
+            tipe_rumah = 'Tipe_60'
+            metode_pembayaran()
+        elif pilih_tipe == '6' :
+            Tipe_70 = 1_300_000_000
+            tipe_rumah = 'Tipe_70'
+            metode_pembayaran()
+        elif pilih_tipe == '7' :
+            Tipe_120 = 1_500_000_000
+            tipe_rumah = 'Tipe_120'
+            metode_pembayaran()
     else:
-        print("Tipe rumah dengan harga yang anda cari belum tersedia")
-        return None
+       beli()
 
-def hitung_biaya_pajak(harga_rumah):
-    pajak_pembelian = harga_rumah * 0.05  # Pajak pembelian 5% dari harga rumah
-    biaya_pajak = pajak_pembelian + 5000000  # Tambahan biaya administrasi
 
-    return biaya_pajak
+def tipe21():
+    print(f'''
+~~~~~~~~~~~~~~~ TIPE 21 ~~~~~~~~~~~~~~~
+Harga           = {Tipe_21}
+Luas Bangunan   = 21 m^2
+Luas Tanah      = 50 m^2
+Fasilitas       = "1 kamar tidur, 1 kamar mandi, ruang tamu, dapur"
 
-def hitung_biaya_total(harga_rumah, tipe_rumah):
-    harga_pokok = harga_rumah * 0.8  # Harga pokok 80% dari harga rumah
-    biaya_pajak = hitung_biaya_pajak(harga_rumah)
+    ''')
 
-    if tipe_rumah == "A":
-        biaya_asuransi = harga_rumah * 0.02  # Biaya asuransi 2% dari harga rumah
-        biaya_total = harga_pokok + biaya_pajak + biaya_asuransi
-    elif tipe_rumah == "B":
-        biaya_perijinan = 10000000  # Biaya perijinan tetap sebesar Rp 10.000.000
-        biaya_total = harga_pokok + biaya_pajak + biaya_perijinan
-    elif tipe_rumah == "C":
-        biaya_pengamanan = harga_rumah * 0.015  # Biaya pengamanan 1.5% dari harga rumah
-        biaya_total = harga_pokok + biaya_pajak + biaya_pengamanan
-    else:
-        print("Tipe rumah tidak valid.")
-        return None
+def tipe36():
+    print(f'''
+~~~~~~~~~~~~~~~ TIPE 36 ~~~~~~~~~~~~~~~
+Harga           = {Tipe_36}
+Luas Bangunan   = 31 m^2
+Luas Tanah      = 70 m^2
+Fasilitas       = "2 kamar tidur, 1 kamar mandi, ruang tamu, ruang makan, dapur, carport"     
 
-    return biaya_total
+    ''')
 
-def pembayaran():
-    pilihan_pembayaran = input("Apakah Anda ingin melakukan pembayaran? (ya/tidak): ")
-    if pilihan_pembayaran.lower() == "ya":
-        return True
-    elif pilihan_pembayaran.lower() == "tidak":
-        return False
-    else:
-        print("Pilihan tidak valid. Pembayaran tidak dilakukan.")
-        return False
+def tipe45():
+    print(f'''
+~~~~~~~~~~~~~~~ TIPE 45 ~~~~~~~~~~~~~~~
+Harga           = {Tipe_45}
+Luas Bangunan   = 45 m^2
+Luas Tanah      = 90 m^2
+Fasilitas       = "2 kamar tidur, 1 kamar mandi, ruang tamu, ruang makan, dapur, carport"
+          
+    ''')
 
-def proses_pembayaran(tipe_rumah, metode_pembayaran):
+def tipe54():
+    print(f'''
+~~~~~~~~~~~~~~~ TIPE 54 ~~~~~~~~~~~~~~~
+Harga           = {Tipe_54}
+Luas Bangunan   = 54 m^2
+Luas Tanah      = 120 m^2
+Fasilitas       = "3 kamar tidur, 2 kamar mandi, ruang tamu, ruang makan, dapur, carport"
+
+    ''')
+
+def tipe60():
+    print(f'''
+~~~~~~~~~~~~~~~ TIPE 60 ~~~~~~~~~~~~~~~
+Harga           = {Tipe_60}
+Luas Bangunan   = 60 m^2
+Luas Tanah      = 130 m^2
+Fasilitas       = "3 kamar tidur, 2 kamar mandi, ruang tamu, ruang makan, dan dapur, carport"          
+          
+    ''')
+
+def tipe70():
+    print(f'''
+~~~~~~~~~~~~~~~ TIPE 70 ~~~~~~~~~~~~~~~
+Harga           = {Tipe_70}
+Luas Bangunan   = 70 m^2
+Luas Tanah      = 140 m^2
+Fasilitas       = "3 kamar tidur, 3 kamar mandi, ruang tamu, ruang makan, dapur, taman, carport"          
+          
+    ''')
+
+def tipe120():
+    print(f'''
+~~~~~~~~~~~~~~~ TIPE 120 ~~~~~~~~~~~~~~~
+Harga           = {Tipe_120}
+Luas Bangunan   = 120 m^2
+Luas Tanah      = 160 m^2
+Fasilitas       = "4 kamar tidur, 4 kamar mandi, ruang tamu, ruang makan, dapur, taman, carport"          
+          
+    ''')
+
+beli()
+
+def hitung_biaya_pajak(): 
+    global biaya_pajak
+    biaya_pajak = tipe_rumah * 1.11
+
+def metode_pembayaran():
+    global total_bayar
+    global pembayaran
+    print('''
+~~~~~~~~~~ METODE PEMBAYARAN ~~~~~~~~~~
+[1] CASH
+[2] KREDIT
+
+    ''')
+    metode = input('Masukkan Pilihan Metode Pembayaran = ')
+    if metode == '1' :
+        pembayaran = 'Tunai'
+        total_bayar = biaya_pajak + notaris + PNBP + provisi
+        print(f'Total Biaya yang Harus Anda Bayar = {total_bayar}')
+        print('Rincian : ')
+        print(f'Harga Rumah dan Pajak \t= {biaya_pajak}')
+        print(f'Biaya Notaris         \t= {notaris}')
+        print(f'Biaya PNBP            \t= {PNBP}')
+        print(f'Biaya Provisi         \t= {provisi}')
+    elif metode == '2' :
+
+        print('kredit')
+
+def kuitansi():
     nama = input("Masukkan nama: ")
     alamat = input("Masukkan alamat: ")
     nomor_hp = input("Masukkan nomor HP: ")
@@ -62,49 +204,16 @@ def proses_pembayaran(tipe_rumah, metode_pembayaran):
     print("Alamat: ", alamat)
     print("Nomor HP: ", nomor_hp)
     print("Tipe Rumah: ", tipe_rumah)
-    print("Metode Pembayaran: ", metode_pembayaran)
+    print("Metode Pembayaran: ", pembayaran)
 
-def pilih_metode_pembayaran():
-    metode_pembayaran = input("Pilih metode pembayaran (cash/kredit): ")
-    if metode_pembayaran.lower() == "cash":
-        return "Cash"
-    elif metode_pembayaran.lower() == "kredit":
-        return "Kredit"
-    else:
-        print("Metode pembayaran tidak valid.")
-        return None
-
-def hitung_jumlah_cicilan(harga_rumah):
-    jumlah_cicilan = int(input("Masukkan jumlah cicilan (dalam bulan): "))
-    cicilan_per_bulan = harga_rumah / jumlah_cicilan
-    return cicilan_per_bulan
-
-def hitung_jangka_waktu(jumlah_cicilan):
-    jangka_waktu = int(input("Masukkan jangka waktu pembayaran (dalam bulan): "))
-    total_bulan = jumlah_cicilan * jangka_waktu
-    return total_bulan
-
-def main():
-    print("Selamat datang di Program Pembelian Rumah")
-    print("========================================")
-    tipe_rumah = beli()
-    if tipe_rumah:
-        harga_rumah = float(input("Masukkan harga rumah: "))
-        if pembayaran():
-            metode_pembayaran = pilih_metode_pembayaran()
-
-            if metode_pembayaran == "Cash":
-                proses_pembayaran(tipe_rumah, metode_pembayaran)
-            elif metode_pembayaran == "Kredit":
-                jumlah_cicilan = hitung_jumlah_cicilan(harga_rumah)
-                total_bulan = hitung_jangka_waktu(jumlah_cicilan)
-                proses_pembayaran(tipe_rumah, metode_pembayaran)
-                print("Jumlah Cicilan per Bulan: ", jumlah_cicilan)
-                print("Total Bulan Pembayaran: ", total_bulan)
-        else:
-            print("Pembayaran tidak dilakukan.")
-    else:
-        print("Pembelian rumah dibatalkan.")
-
-if __name__ == "__main__":
-    main()
+def data_harga() :
+    global bunga
+    global notaris
+    global PNBP
+    global provisi 
+    dp = float(input('Masukkan uang muka yang ingin dibayarkan = '))
+    waktu = float(input('Masukkan Jangka waktu dalam tahun = '))
+    bunga = 0.05 
+    notaris = 0.01
+    PNBP = 650_000_000
+    provisi = 1_500_000
