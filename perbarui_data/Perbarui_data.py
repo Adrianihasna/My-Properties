@@ -47,8 +47,8 @@ Silahkan Pilih Menu :
     else:
         if pilih == 1 :
             tambah_data()
-        elif pilih == 2 : 
-            update_data()
+        # elif pilih == 2 : 
+        #     update_data()
         elif pilih == 3 :
             hapus_data()
         elif pilih == 4 :

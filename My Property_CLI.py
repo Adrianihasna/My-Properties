@@ -22,7 +22,6 @@ Pilihan menu :
 \n''')
 
 
-
 def utama():
     try :
         menu = int(input('Masukkan pilihan Menu = '))
@@ -55,7 +54,7 @@ def utama():
             utama()
         elif menu == 5:
             #Program Selesai
-            print('\nTERIMA KASIH SUDAH MENGGUNAKAN PROGRAM')
+            print('\nTERIMA KASIH SUDAH MENGGUNAKAN PROGRAM INI')
         else : 
             print('Mohon Masukkan Pilihan Sesuai Menu')
 

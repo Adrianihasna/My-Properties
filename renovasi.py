@@ -133,7 +133,7 @@ def RAB_KM():
                         ["Pasir", hitung_biaya_pasir(luas_lantai, harga_pasir)],
                         ["Nat", hitung_biaya_nat(luas_lantai, harga_nat)],
                         ["Total Biaya Renovasi", biaya_renovasi]]
-    table = tabulate(data_Kamar_Mandi, headers="firstrow", tablefmt="grid")
+    table = tabulate(data_Kamar_Mandi, headers="firstrow", tablefmt="grid",floatfmt=".1f")
     print("\nTabel RAB (Rencana Anggaran Biaya):")
     print(table)
     return data_Kamar_Mandi
@@ -146,7 +146,7 @@ def RAB_KT_RT_Dapur():
                         ["Pasir", hitung_biaya_pasir(luas_lantai, harga_pasir)],
                         ["Nat", hitung_biaya_nat(luas_lantai, harga_nat)],
                         ["Total Biaya Renovasi", biaya_renovasi]]
-    table = tabulate(data_KT_RT_Dapur, headers="firstrow", tablefmt="grid")
+    table = tabulate(data_KT_RT_Dapur, headers="firstrow", tablefmt="grid",floatfmt=".1f")
     print("\nTabel RAB (Rencana Anggaran Biaya):")
     print(table)
 
@@ -158,7 +158,7 @@ def RAB_Teras():
                   ["Pasir", hitung_biaya_pasir(luas_lantai, harga_pasir)],
                   ["Nat", hitung_biaya_nat(luas_lantai, harga_nat)],
                   ["Total Biaya Renovasi", biaya_renovasi]]
-    table = tabulate(data_teras, headers="firstrow", tablefmt="grid")
+    table = tabulate(data_teras, headers="firstrow", tablefmt="grid",floatfmt=".1f")
     print("\nTabel RAB (Rencana Anggaran Biaya):")
     print(table)
 

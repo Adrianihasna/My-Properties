@@ -110,17 +110,17 @@ def biaya_bata(luas_dinding, harga_bata):
     return biaya_bata
 
 def RAB_Aula():
-    data_aula = [[" Nama Material ", "Biaya " ],
-                 [" semen ", biaya_semen(luas_lantai, luas_dinding, harga_semen)],
+    data_aula = [[" Nama Material ", "           Biaya           " ],
+                 [" semen ",biaya_semen(luas_lantai, luas_dinding, harga_semen)],
                  [" cat ", biaya_cat(luas_dinding, harga_cat)],
                  [" pasir ", biaya_pasir(luas_lantai, harga_pasir)],
                  [" batusplit ", biaya_batusplit(luas_lantai, harga_batusplit)],
-                 [" lantai ", biaya_batusplit(luas_lantai, harga_lantai)],
+                 [" lantai ", biaya_lantai(luas_lantai, harga_lantai)],
                  [" besi ", biaya_besi(luas_lantai, luas_dinding, harga_besi)],
                  [" genteng ", biaya_genteng(luas_lantai, harga_genteng)],
                  [" bata ", biaya_bata(luas_dinding, harga_bata)],
                  [" total biaya pembangunan", Biaya_Pembangunan]]
-    table = tabulate(data_aula, headers="firstrow", tablefmt="grid")
+    table = tabulate(data_aula, headers="firstrow", tablefmt="grid",floatfmt=".1f")
     print("\nTabel RAB (Rencana Anggaran Biaya):")
     print(table)
     return data_aula
@@ -135,7 +135,7 @@ def RAB_Gor():
                 [" genteng ", biaya_genteng(luas_lantai, harga_genteng)],
                 [" bata ", biaya_bata(luas_dinding, harga_bata)],
                 [" total biaya pembangunan", Biaya_Pembangunan]]
-    table = tabulate(data_gor, headers="firstrow", tablefmt="grid")
+    table = tabulate(data_gor, headers="firstrow", tablefmt="grid",floatfmt=".1f")
     print("\nTabel RAB (Rencana Anggaran Biaya):")
     print(table)
 
@@ -150,7 +150,7 @@ def RAB_Rumah():
                  [" genteng ", biaya_genteng(luas_lantai, harga_genteng)],
                  [" bata ", biaya_bata(luas_dinding, harga_bata)],
                  [" total biaya pembangunan", Biaya_Pembangunan]]
-    table = tabulate(data_rumah, headers="firstrow", tablefmt="grid")
+    table = tabulate(data_rumah, headers="firstrow", tablefmt="grid",floatfmt=".1f")
     print("\nTabel RAB (Rencana Anggaran Biaya):")
     print(table)
 def run():
