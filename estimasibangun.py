@@ -71,6 +71,7 @@ Pilihan Ruangan :
         RAB_Rumah()
     else:
         print("Pilihan pembangunan tidak valid.")
+        main()
 
     print("Estimasi biaya pembangunan", tipe_pembangunan, "adalah: Rp", Biaya_Pembangunan)
 
