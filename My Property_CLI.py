@@ -23,40 +23,42 @@ Pilihan menu :
 
 
 def utama():
+    global menu
     try :
-        menu = int(input('Masukkan pilihan Menu = '))
+        menu = int(input('\nMasukkan pilihan Menu = '))
     except ValueError :
-        print('Kesalahan Input')
+        print('\nKesalahan Input')
         utama()
     else :
-        while menu not in range(1,6) :
-            menu = int(input('Masukkan pilihan Menu = '))
-        if menu == 1 :
-            #Program Estimasi Pembangunan Rumah
-            estimasi_pembangunan = estimasi.main()
-            beranda()
-            utama()
-        elif menu == 2 :
-            # Program Estimasi Renovasi Rumah
-            renovasi = renov.main()
-            beranda()
-            utama()
-        elif menu == 3 :
-            #Program Pembelian Rumah
-            print('Pembelian rumah')
-            pembelian = beli.beli()
-            beranda()
-            utama()
-        elif menu == 4 :
-            #Program Perbarui Data 
-            login = Perbarui_data.login_akun()
-            beranda()
-            utama()
-        elif menu == 5:
-            #Program Selesai
-            print('\nTERIMA KASIH SUDAH MENGGUNAKAN PROGRAM INI')
+        if menu in range(1,6):
+            if menu == 1 :
+                #Program Estimasi Pembangunan Rumah
+                estimasi_pembangunan = estimasi.main()
+                beranda()
+                utama()
+            elif menu == 2 :
+                # Program Estimasi Renovasi Rumah
+                renovasi = renov.main()
+                beranda()
+                utama()
+            elif menu == 3 :
+                #Program Pembelian Rumah
+                print('Pembelian rumah')
+                pembelian = beli.beli()
+                beranda()
+                utama()
+            elif menu == 4 :
+                #Program Perbarui Data 
+                login = Perbarui_data.login_akun()
+                beranda()
+                utama()
+            elif menu == 5:
+                #Program Selesai
+                print('\nTERIMA KASIH SUDAH MENGGUNAKAN PROGRAM INI')
+                exit()
         else : 
-            print('Mohon Masukkan Pilihan Sesuai Menu')
+            print('\nKesalahan Input')
+            utama()
 
 beranda()
 utama()

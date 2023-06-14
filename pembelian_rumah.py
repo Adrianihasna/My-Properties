@@ -3,8 +3,6 @@ from tabulate import tabulate
 import datetime
 
 def beli() :
-    global tipe_rumah
-    global harga_tipe_rumah
     data_harga()
     os.system('cls')    
     print('''
@@ -41,52 +39,57 @@ def beli() :
     else :
         beli()
 
-    pembelian = input('Lakukan Pembelian (ya/tidak) = ')
+    pembelian = input('Lakukan Pembelian (y/n) = ')
     pembelian = pembelian.lower()
-    if pembelian == "ya":
-        print('''
-        TIPE RUMAH :
+    if pembelian == "y":
+        def beli_tipe_rumah():
+            global tipe_rumah
+            global harga_tipe_rumah
+            print('''
+            TIPE RUMAH :
 
-        [1] TIPE 21
-        [2] TIPE 36
-        [3] TIPE 45
-        [4] TIPE 54
-        [5] TIPE 60
-        [6] TIPE 70
-        [7] TIPE 120
+            [1] TIPE 21
+            [2] TIPE 36
+            [3] TIPE 45
+            [4] TIPE 54
+            [5] TIPE 60
+            [6] TIPE 70
+            [7] TIPE 120
 
-        ''')
-        pilih_tipe = input('Masukkan Tipe Rumah yang ingin Dibeli = ')
-        if pilih_tipe == '1' :
-            harga_tipe_rumah = Tipe_21
-            tipe_rumah = 'Tipe_21'
-            metode_pembayaran()
-        elif pilih_tipe == '2' :
-            harga_tipe_rumah = Tipe_36
-            tipe_rumah = 'Tipe_36'
-            metode_pembayaran()
-        elif pilih_tipe == '3' :
-            harga_tipe_rumah = Tipe_45
-            tipe_rumah = 'Tipe_45'
-            metode_pembayaran()
-        elif pilih_tipe == '4' : 
-            harga_tipe_rumah = Tipe_54
-            tipe_rumah = 'Tipe_54'
-            metode_pembayaran()
-        elif pilih_tipe == '5' : 
-            harga_tipe_rumah = Tipe_60
-            tipe_rumah = 'Tipe_60'
-            metode_pembayaran()
-        elif pilih_tipe == '6' : 
-            harga_tipe_rumah = Tipe_70
-            tipe_rumah = 'Tipe_70'
-            metode_pembayaran()
-        elif pilih_tipe == '7' :
-            harga_tipe_rumah = Tipe_120
-            tipe_rumah = 'Tipe_120'
-            metode_pembayaran()
-        else :
-            print('**Tipe Rumah Tidak Tersedia**')
+            ''')
+            pilih_tipe = input('Masukkan Tipe Rumah yang ingin Dibeli = ')
+            if pilih_tipe == '1' :
+                harga_tipe_rumah = Tipe_21
+                tipe_rumah = 'Tipe_21'
+                metode_pembayaran()
+            elif pilih_tipe == '2' :
+                harga_tipe_rumah = Tipe_36
+                tipe_rumah = 'Tipe_36'
+                metode_pembayaran()
+            elif pilih_tipe == '3' :
+                harga_tipe_rumah = Tipe_45
+                tipe_rumah = 'Tipe_45'
+                metode_pembayaran()
+            elif pilih_tipe == '4' : 
+                harga_tipe_rumah = Tipe_54
+                tipe_rumah = 'Tipe_54'
+                metode_pembayaran()
+            elif pilih_tipe == '5' : 
+                harga_tipe_rumah = Tipe_60
+                tipe_rumah = 'Tipe_60'
+                metode_pembayaran()
+            elif pilih_tipe == '6' : 
+                harga_tipe_rumah = Tipe_70
+                tipe_rumah = 'Tipe_70'
+                metode_pembayaran()
+            elif pilih_tipe == '7' :
+                harga_tipe_rumah = Tipe_120
+                tipe_rumah = 'Tipe_120'
+                metode_pembayaran()
+            else :
+                print('**Tipe Rumah Tidak Tersedia**')
+                beli_tipe_rumah()
+        beli_tipe_rumah()
     else:
        beli()
 
@@ -204,19 +207,27 @@ def metode_pembayaran():
         print()
         kuitansi_tunai()
     elif metode == '2' :
-        dp = float(input('Masukkan uang muka yang ingin dibayarkan = '))
-        waktu = float(input('Masukkan Jangka waktu dalam tahun = '))
-        if waktu == 0 :
-            pembayaran = 'Tunai'
-            total_bayar = (biaya_pajak + (notaris * harga_tipe_rumah) + PNBP + provisi) - dp
-            kuitansi_tunai()
-        else :
-            pembayaran = 'Kredit'
-            hutang = (biaya_pajak + (notaris * harga_tipe_rumah) + PNBP + provisi) - dp
-            cicilan_bunga = ((bunga*hutang)*waktu)//(waktu*12)
-            total_bayar = hutang//(12*waktu) + cicilan_bunga
-            kuitansi_kredit()
-            
+        def bayar_kredit():
+            try:
+                dp = int(input('Masukkan uang muka yang ingin dibayarkan = '))
+                waktu = float(input('Masukkan Jangka waktu dalam tahun = '))
+            except ValueError :
+                print('**Mohon Masukkan Dalam Bentuk Angka**')
+                bayar_kredit()
+            else :
+                if waktu == 0 :
+                    pembayaran = 'Tunai'
+                    total_bayar = (biaya_pajak + (notaris * harga_tipe_rumah) + PNBP + provisi) - dp
+                    kuitansi_tunai()
+                else :
+                    pembayaran = 'Kredit'
+                    hutang = (biaya_pajak + (notaris * harga_tipe_rumah) + PNBP + provisi) - dp
+                    cicilan_bunga = ((bunga*hutang)*waktu)//(waktu*12)
+                    total_bayar = hutang//(12*waktu) + cicilan_bunga
+                    kuitansi_kredit()
+        bayar_kredit()
+    else :
+        metode_pembayaran()     
     return
 
 def data_harga() :
@@ -250,7 +261,7 @@ def kuitansi_tunai():
     nomor_hp = input("Masukkan nomor HP: ")
     tanggal = datetime.date.today()
     formattanggal = tanggal.strftime('%d/%m/%y')
-    with open('My-Property\kuitansi.txt','a')as file :
+    with open('kuitansi.txt','a')as file :
         file.write(f'''
                         KUITANSI
                                         {formattanggal}
@@ -282,7 +293,7 @@ def kuitansi_kredit():
     nomor_hp = input("Masukkan nomor HP: ")
     tanggal = datetime.date.today()
     formattanggal = tanggal.strftime('%d/%m/%y')
-    with open('My-Property\kuitansi.txt','a')as file :
+    with open('kuitansi.txt','a')as file :
         file.write(f'''
                         KUITANSI
                                         {formattanggal}
