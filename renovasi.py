@@ -150,7 +150,6 @@ def hitung_biaya_lantaiKM(luas_lantai, harga_lantaiKM_per_meter):
     return biaya_lantaiKM
 
 def hitung_biaya_CatKM(luas_dinding,harga_cat_per_meter) :
-    # global biaya_catKM
     biaya_catKM = (1/3) * luas_dinding * harga_cat_per_meter
     return biaya_catKM
 
@@ -174,6 +173,7 @@ def RAB_KM():
     data_Kamar_Mandi = [["Rincian", "        Biaya        "],
                         ["Cat Tembok", hitung_biaya_CatKM(luas_dinding,harga_cat_per_meter)],
                         ["Dinding Keramik", hitung_biaya_dinding_keramik(luas_dinding, harga_dinding_Keramik_per_meter)],
+                        ["Lantai", hitung_biaya_lantaiKM(luas_lantai, harga_lantaiKM_per_meter)],
                         ["Semen ", hitung_biaya_semen(luas_lantai, harga_semen)],
                         ["Pasir", hitung_biaya_pasir(luas_lantai, harga_pasir)],
                         ["Nat", hitung_biaya_nat(luas_lantai, harga_nat)],
