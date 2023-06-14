@@ -185,8 +185,8 @@ def RAB_KM():
     
 def RAB_KT_RT_Dapur():
     data_KT_RT_Dapur = [["Rincian", "         Biaya         "],
-                        ["Harga Cat", hitung_biaya_cat(luas_dinding, harga_cat_per_meter)],
-                        ["Harga Lantai", hitung_biaya_lantai(luas_lantai, harga_lantai_per_meter)],
+                        ["Cat", hitung_biaya_cat(luas_dinding, harga_cat_per_meter)],
+                        ["Lantai", hitung_biaya_lantai(luas_lantai, harga_lantai_per_meter)],
                         ["Semen ", hitung_biaya_semen(luas_lantai, harga_semen)],
                         ["Pasir", hitung_biaya_pasir(luas_lantai, harga_pasir)],
                         ["Nat", hitung_biaya_nat(luas_lantai, harga_nat)],
@@ -197,8 +197,8 @@ def RAB_KT_RT_Dapur():
 
 def RAB_Teras():
     data_teras = [["Rincian", "        Biaya        "],
-                  ["Harga Cat", hitung_biaya_dinding_teras(panjang, tinggi, harga_cat_per_meter)],
-                  ["Harga Lantai", hitung_biaya_lantai(luas_lantai, harga_lantai_per_meter)],
+                  ["Cat", hitung_biaya_dinding_teras(panjang, tinggi, harga_cat_per_meter)],
+                  ["Lantai", hitung_biaya_lantai(luas_lantai, harga_lantai_per_meter)],
                   ["Semen ", hitung_biaya_semen(luas_lantai, harga_semen)],
                   ["Pasir", hitung_biaya_pasir(luas_lantai, harga_pasir)],
                   ["Nat", hitung_biaya_nat(luas_lantai, harga_nat)],
