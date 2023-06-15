@@ -33,9 +33,9 @@ Pilihan Ruangan :
                     global lebar
                     global tinggi
                     try : 
-                        panjang = int(input("Masukkan panjang ruangan (meter): "))
-                        lebar = int(input("Masukkan lebar ruangan (meter): "))
-                        tinggi = int(input("Masukkan tinggi ruangan (meter): "))
+                        panjang = float(input("Masukkan panjang ruangan (meter): "))
+                        lebar = float(input("Masukkan lebar ruangan (meter): "))
+                        tinggi = float(input("Masukkan tinggi ruangan (meter): "))
                     except ValueError:
                         print('\n**Mohon Masukkan Input Berupa Angka**')
                         kriteria() 
