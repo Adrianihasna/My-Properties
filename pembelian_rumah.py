@@ -180,10 +180,6 @@ def hitung_biaya_pajak():
 def metode_pembayaran():
     global total_bayar
     global pembayaran
-    global hutang
-    global cicilan_bunga
-    global dp
-    global waktu
     hitung_biaya_pajak()
     data_harga()
 
@@ -208,6 +204,12 @@ def metode_pembayaran():
         kuitansi_tunai()
     elif metode == '2' :
         def bayar_kredit():
+            global hutang
+            global dp
+            global pembayaran
+            global total_bayar
+            global cicilan_bunga
+            global waktu
             try:
                 dp = int(input('Masukkan uang muka yang ingin dibayarkan = '))
                 waktu = float(input('Masukkan Jangka waktu dalam tahun = '))
@@ -286,7 +288,7 @@ def kuitansi_tunai():
     TOTAL BAYAR         : {total_bayar}
     METODE PEMBAYARAN   : {pembayaran}
                    ''')
-
+ 
 def kuitansi_kredit():
     nama = input("Masukkan nama: ")
     alamat = input("Masukkan alamat: ")
