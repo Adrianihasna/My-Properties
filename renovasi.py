@@ -52,7 +52,7 @@ Pilihan Ruangan :
                         global biaya_renovasi
 
                         harga = []
-                        with open('perbarui_data\DATA_MATERIAL.csv') as data :
+                        with open('perbarui_data\data_material.csv') as data :
                             data = csv.reader(data,delimiter=',')
                             for i in data :
                                 harga.append(i)

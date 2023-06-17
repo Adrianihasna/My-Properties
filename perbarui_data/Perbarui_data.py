@@ -7,7 +7,7 @@ from tabulate import tabulate
 def login_akun() :
     os.system('cls')
     akun =[]
-    with open('perbarui_data\Akun.csv') as csv_file :
+    with open('perbarui_data\\akun.csv') as csv_file :
         csv_reader = csv.reader(csv_file, delimiter=';')
         for i in csv_reader:
             akun.append(i)
@@ -88,7 +88,7 @@ def tambah_data():
     keterangan = input('Masukkan Keterangan \t= ')
 
     tambah = '\n{},{},{}'.format(material,harga,keterangan)
-    data = open('perbarui_data\DATA_MATERIAL.csv','a')
+    data = open('perbarui_data\data_material.csv','a')
     data.write(tambah)
     data.close()
     print('Data Berhasil Ditambahkan ')
@@ -106,7 +106,7 @@ def hapus_data():
     from tabulate import tabulate
     os.system('cls')
 
-    daftar = pd.read_csv('perbarui_data\DATA_MATERIAL.csv')
+    daftar = pd.read_csv('perbarui_data\data_material.csv')
     print('\n','~'*34,'DATA MATERIAL','~'*34)
     print()
     print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='grid' )) 
@@ -120,7 +120,7 @@ def hapus_data():
             if hapus in range(len(daftar)):
                 daftar.drop(index=hapus,
                             inplace=True)
-                daftar.to_csv('perbarui_data\DATA_MATERIAL.csv',index= False)
+                daftar.to_csv('perbarui_data\data_material.csv',index= False)
                 daftar.reset_index(drop=True,
                             inplace=True)
                 print('\n','~'*32,'DATA MATERIAL BARU','~'*32)
@@ -147,7 +147,7 @@ def hapus_data():
 
 def update_data():
     os.system('cls')
-    daftar = pd.read_csv('perbarui_data\DATA_MATERIAL.csv')
+    daftar = pd.read_csv('perbarui_data\data_material.csv')
     print('\n','~'*34,'DATA MATERIAL','~'*34)
     print()
     print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='grid' ))
@@ -169,7 +169,7 @@ def update_data():
                         print('\n**Mohon Masukkan Harga Berupa Angka**')
                     else:
                         daftar.loc[indeks:indeks] = daftar.replace(harga_lama,harga_baru)
-                        daftar.to_csv('perbarui_data\DATA_MATERIAL.csv',index= False)
+                        daftar.to_csv('perbarui_data\data_material.csv',index= False)
                         print('\n','~'*32,'DATA MATERIAL BARU','~'*32)
                         print()
                         print(tabulate(daftar,headers = ['Index','     MATERIAL     ', '     HARGA     ', '     KETERANGAN     ' ], tablefmt='grid' ))

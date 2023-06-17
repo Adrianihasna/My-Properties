@@ -50,7 +50,7 @@ Pilihan Bangunan :
                         global Biaya_Pembangunan
 
                         biaya = []
-                        with open('perbarui_data\DATA_MATERIAL.csv') as data :
+                        with open('perbarui_data\data_material.csv') as data :
                             data = csv.reader(data,delimiter=',')
                             for i in data :
                                 biaya.append(i)

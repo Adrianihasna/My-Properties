@@ -1,5 +1,5 @@
 import os 
-from perbarui_data import Perbarui_data
+from perbarui_data import perbarui_data
 import renovasi as renov
 import estimasibangun as estimasi
 import pembelian_rumah as beli 
@@ -49,7 +49,7 @@ def utama():
                 utama()
             elif menu == 4 :
                 #Program Perbarui Data 
-                login = Perbarui_data.login_akun()
+                login = perbarui_data.login_akun()
                 beranda()
                 utama()
             elif menu == 5:
