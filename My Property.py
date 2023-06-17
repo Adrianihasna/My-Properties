@@ -1,7 +1,7 @@
 import os 
 from perbarui_data import perbarui_data
-import renovasi as renov
-import estimasibangun as estimasi
+import estimasi_renovasi_rumah as renovasi
+import estimasi_pembangunan as estimasi
 import pembelian_rumah as beli 
 
 os.system('cls')
@@ -38,7 +38,7 @@ def utama():
                 utama()
             elif menu == 2 :
                 # Program Estimasi Renovasi Rumah
-                renovasi = renov.main()
+                estimasi_renovasi = renovasi.main()
                 beranda()
                 utama()
             elif menu == 3 :

@@ -12,6 +12,7 @@ def login_akun() :
         for i in csv_reader:
             akun.append(i)
     label = akun.pop(0)
+    print('Silahkan Masukkan Username dan Password')
     
     i=0
     while i !=3 :
@@ -48,7 +49,7 @@ def pilihan():
 Silahkan Pilih Menu :
 
 [1] Tambah Data
-[2] Perbarui Data
+[2] Perbarui Harga
 [3] Hapus Data
 [4] Keluar
     
@@ -76,6 +77,7 @@ Silahkan Pilih Menu :
 # Perbarui Data
 def tambah_data():
     os.system('cls')
+    print('Silahkan Masukkan Data Material yang Ingin Ditambahkan\n')
     material = input('Masukkan Nama Material \t= ')
     def hargabaru():
         global harga

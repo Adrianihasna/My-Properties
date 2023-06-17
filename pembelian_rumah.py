@@ -60,31 +60,31 @@ def beli() :
             pilih_tipe = input('Masukkan Tipe Rumah yang ingin Dibeli = ')
             if pilih_tipe == '1' :
                 harga_tipe_rumah = Tipe_21
-                tipe_rumah = 'Tipe_21'
+                tipe_rumah = 'Tipe 21'
                 metode_pembayaran()
             elif pilih_tipe == '2' :
                 harga_tipe_rumah = Tipe_36
-                tipe_rumah = 'Tipe_36'
+                tipe_rumah = 'Tipe 36'
                 metode_pembayaran()
             elif pilih_tipe == '3' :
                 harga_tipe_rumah = Tipe_45
-                tipe_rumah = 'Tipe_45'
+                tipe_rumah = 'Tipe 45'
                 metode_pembayaran()
             elif pilih_tipe == '4' : 
                 harga_tipe_rumah = Tipe_54
-                tipe_rumah = 'Tipe_54'
+                tipe_rumah = 'Tipe 54'
                 metode_pembayaran()
             elif pilih_tipe == '5' : 
                 harga_tipe_rumah = Tipe_60
-                tipe_rumah = 'Tipe_60'
+                tipe_rumah = 'Tipe 60'
                 metode_pembayaran()
             elif pilih_tipe == '6' : 
                 harga_tipe_rumah = Tipe_70
-                tipe_rumah = 'Tipe_70'
+                tipe_rumah = 'Tipe 70'
                 metode_pembayaran()
             elif pilih_tipe == '7' :
                 harga_tipe_rumah = Tipe_120
-                tipe_rumah = 'Tipe_120'
+                tipe_rumah = 'Tipe 120'
                 metode_pembayaran()
             else :
                 print('**Tipe Rumah Tidak Tersedia**')
