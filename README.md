@@ -12,6 +12,12 @@ Adalah modul yang digunakan untuk menyimpan fungsi-fungsi perhitungan dalam mene
 ## estimasi_renovasi_rumah (py) 
 Adalah modul yang digunakan untuk menyimpan fungsi-fungsi perhitungan dalam menentukan estimasi renovasi bagian rumah. 
 
+## Flowchart My Property (pdf)
+Adalah file pdf yang berisi mengenai flowchart pada program My Property
+
+## Laporan Praktikum Prokom_Kelompok 3 (pdf)
+Adalah file pdf yang berisi mengenai laporan dari hasil pembuatan program My Property
+
 ## pembelian_rumah (py) 
 Adalah modul yang digunakan untuk menyimpan fungsi-fungsi untuk melakukan pembelian rumah. 
 
@@ -26,3 +32,4 @@ Adalah modul yang berisi daftar material yang digunakan dalam proses perhitungan
 
 ### perbarui_data (py)
 Adalah modul yang berisi fungsi-fungsi program untuk menambah, menghapus, dan memperbarui harga material. 
+
