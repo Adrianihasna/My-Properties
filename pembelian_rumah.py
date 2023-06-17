@@ -35,7 +35,7 @@ def beli() :
         tipe70()
         tipe120()
     elif tipe == '5':
-        print()
+        return()
     else :
         beli()
 
