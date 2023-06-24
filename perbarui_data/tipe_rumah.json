@@ -1,11 +1,11 @@
 {
     "TIPE 21" : {
         "21A" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "183_000_000",
+            "luasbangunan" : "21",
+            "luastanah" : "62", 
+            "fasilitas" : "1 kamar tidur, 1 kamar mandi, taman",
+            "lokasi" : "Prambanan"
         },
         "21B" : {
             "harga" : "",
@@ -24,11 +24,11 @@
     },
     "TIPE 36" : {
         "36A" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "295_000_000",
+            "luasbangunan" : "36",
+            "luastanah" : "72", 
+            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi" : "Kudu, Solo Baru"
         },
         "36B" : {
             "harga" : "",
