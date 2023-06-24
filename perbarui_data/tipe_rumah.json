@@ -1,0 +1,163 @@
+{
+    "TIPE 21" : {
+        "21A" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "21B" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "21C" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        }
+    },
+    "TIPE 36" : {
+        "36A" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "36B" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "36C" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        }     
+    }, 
+    "TIPE 45" : {
+        "45A" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "45B" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "45C" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        }
+    },
+    "TIPE 54" : {
+        "54A" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "54B" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "54C" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        }
+    },
+    "TIPE 60" : {
+        "60A" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "60B" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "60C" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        }
+    },
+    "TIPE 70" : {
+        "70A" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "70B" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "70C" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        }
+    },
+    "TIPE 120" : {
+        "120A" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "120B" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        },
+        "120C" : {
+            "harga" : "",
+            "luasbangunan" : "",
+            "luastanah" : "", 
+            "fasilitas" : "",
+            "lokasi" : ""
+        }
+    }
+}
