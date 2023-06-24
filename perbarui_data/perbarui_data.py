@@ -3,6 +3,7 @@ import csv
 import pandas as pd
 import os
 from tabulate import tabulate
+import json
 
 def login_akun() :
     os.system('cls')
@@ -194,3 +195,95 @@ def update_data():
         return
     ubah()
     return        
+
+def tambah_rumah():
+    os.system('cls')
+    print('~~~~~ Tambah Daftar Rumah ~~~~~')
+    print('''
+    Pilih Tipe Rumah Yang Ingin Ditambahkan
+
+    [1] Tipe 21
+    [2] Tipe 36
+    [3] Tipe 45
+    [4] Tipe 54
+    [5] Tipe 60
+    [6] Tipe 70
+    [7] Tipe 120
+    [8] Keluar
+
+    ''')
+    try:
+        with open("perbarui_data\\tipe_rumah.json", "r") as file:
+            datarumah = json.load(file)
+    except FileNotFoundError:
+        datarumah = {}
+    
+    pilih_tipe = input('Masukkan Pilihan  = ')
+    jumlah = 0
+    if pilih_tipe == '1' :
+        tipe = "TIPE 21"
+        kodetipe = 21
+        print()
+    elif pilih_tipe == '2' :
+        tipe = "TIPE 36"
+        kodetipe = 36
+        print()
+    elif pilih_tipe == '3' :
+        tipe = "TIPE 45"
+        kodetipe = 45
+        print()
+    elif pilih_tipe == '4' :
+        tipe = "TIPE 54"
+        kodetipe = 54
+        print()
+    elif pilih_tipe == '5' :
+        tipe = "TIPE 60"
+        kodetipe = 60
+        print()
+    elif pilih_tipe == '6' :
+        tipe = "TIPE 70"
+        kodetipe = 70
+        print()
+    elif pilih_tipe == '7' :
+        tipe = "TIPE 120"
+        kodetipe = 120
+        print()
+    elif pilih_tipe == '8':
+        return()
+    else : 
+        tambah_rumah()
+
+    for jumlah in range(len(datarumah[tipe])):
+        jumlah += 1
+        print(jumlah)
+
+    while True : 
+        try : 
+            hargarumah = int(input('Masukkan Harga Rumah = '))
+        except ValueError :
+            print('\n**Mohon Masukkan Harga dengan Benar**')
+        else : 
+            break
+    while True : 
+        try : 
+            luasbangunan = float(input('Masukkan Luas Bangunan = '))
+        except ValueError :
+            print('\n**Mohon Masukkan Luas Bangunan dengan Benar**')
+        else : 
+            break
+    while True : 
+        try : 
+            luastanah = float(input('Masukkan Luas Tanah = '))
+        except ValueError :
+            print('\n**Mohon Masukkan Luas Tanah dengan Benar**')
+        else : 
+            break
+    fasilitas = input('Masukkan Fasilitas Yang Tersedia = ')
+    lokasi = input('Masukkan Lokasi Rumah = ')
+
+    data_baru = {
+        (f'{kodetipe}{(jumlah+1)}')
+    }
+    print(data_baru)
+tambah_rumah()
+

@@ -1,20 +1,20 @@
 {
     "TIPE 21" : {
-        "21A" : {
+        "211" : {
             "harga" : "183_000_000",
             "luasbangunan" : "21",
             "luastanah" : "62", 
             "fasilitas" : "1 kamar tidur, 1 kamar mandi, taman",
             "lokasi" : "Prambanan"
         },
-        "21B" : {
+        "212" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "21C" : {
+        "213" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
@@ -23,21 +23,21 @@
         }
     },
     "TIPE 36" : {
-        "36A" : {
+        "361" : {
             "harga" : "295_000_000",
             "luasbangunan" : "36",
             "luastanah" : "72", 
             "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
             "lokasi" : "Kudu, Solo Baru"
         },
-        "36B" : {
+        "362" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "36C" : {
+        "363" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
@@ -46,21 +46,21 @@
         }     
     }, 
     "TIPE 45" : {
-        "45A" : {
+        "451" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "45B" : {
+        "452" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "45C" : {
+        "453" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
@@ -69,21 +69,21 @@
         }
     },
     "TIPE 54" : {
-        "54A" : {
+        "541" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "54B" : {
+        "542" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "54C" : {
+        "543" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
@@ -92,21 +92,21 @@
         }
     },
     "TIPE 60" : {
-        "60A" : {
+        "601" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "60B" : {
+        "602" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "60C" : {
+        "603" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
@@ -115,21 +115,21 @@
         }
     },
     "TIPE 70" : {
-        "70A" : {
+        "701" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "70B" : {
+        "702" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "70C" : {
+        "703" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
@@ -138,21 +138,21 @@
         }
     },
     "TIPE 120" : {
-        "120A" : {
+        "1201" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "120B" : {
+        "1202" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
         },
-        "120C" : {
+        "1203" : {
             "harga" : "",
             "luasbangunan" : "",
             "luastanah" : "", 
