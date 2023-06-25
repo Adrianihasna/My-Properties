@@ -8,15 +8,15 @@
             "lokasi" : "Prambanan"
         },
         "212" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "190_000_000",
+            "luasbangunan" : "21",
+            "luastanah" : "61", 
+            "fasilitas" : "1 kamar tidur, 1 kamar mandi, garasi, taman",
+            "lokasi" : "Klaten Utara, Klaten"
         },
         "213" : {
-            "harga" : "",
-            "luasbangunan" : "",
+            "harga" : "220_000_000",
+            "luasbangunan" : "21",
             "luastanah" : "", 
             "fasilitas" : "",
             "lokasi" : ""
@@ -31,41 +31,41 @@
             "lokasi" : "Kudu, Solo Baru"
         },
         "362" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "245_000_000",
+            "luasbangunan" : "36",
+            "luastanah" : "60", 
+            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi" : "Gentan, Sukoharjo"
         },
         "363" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "260_200_000",
+            "luasbangunan" : "36",
+            "luastanah" : "65", 
+            "fasilitas" : "2 kamar tidur, 1 kamar mandi,taman,",
+            "lokasi" : "Baki, Sukoharjo"
         }     
     }, 
     "TIPE 45" : {
         "451" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "490_000_000",
+            "luasbangunan" : "45",
+            "luastanah" : "119", 
+            "fasilitas" : "2 kamar tidue, 1 kamar mandi, garasi",
+            "lokasi" : "Kartasura, Solo Barat"
         },
         "452" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "425_000_000",
+            "luasbangunan" : "45",
+            "luastanah" : "72", 
+            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi, taman, dapur",
+            "lokasi" : "Gedangan, Solo Baru"
         },
         "453" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "385_000_000",
+            "luasbangunan" : "45",
+            "luastanah" : "20", 
+            "fasilitas" : "2 kamar tidur, 1 kamar mandi, taman",
+            "lokasi" : "Solo Baru"
         }
     },
     "TIPE 54" : {
@@ -77,41 +77,41 @@
             "lokasi" : ""
         },
         "542" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "420_000_000",
+            "luasbangunan" : "54",
+            "luastanah" : "90", 
+            "fasilitas" : "2 kamar tidur, 1 kamar mandi, taman",
+            "lokasi" : "Sukoharjo"
         },
         "543" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "1_600_000_000",
+            "luasbangunan" : "54",
+            "luastanah" : "174", 
+            "fasilitas" : "3 kamar tidur, 2 kamar mandi, garasi ",
+            "lokasi" : "Laweyan, Solo"
         }
     },
     "TIPE 60" : {
         "601" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "825_000_000",
+            "luasbangunan" : "60",
+            "luastanah" : "60", 
+            "fasilitas" : "3 kamar tidur, 2 kamar mandi, garasi, taman",
+            "lokasi" : "Solo Baru, Surakarta"
         },
         "602" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "575_000_000",
+            "luasbangunan" : "60",
+            "luastanah" : "105", 
+            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi" : "Banjarsari, Surakarta"
         },
         "603" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "359_000_000",
+            "luasbangunan" : "60",
+            "luastanah" : "72", 
+            "fasilitas" : "2 kamar mandi,1 kamar mandi, garasi, taman",
+            "lokasi" : "Laweyan, Surakarta"
         }
     },
     "TIPE 70" : {
