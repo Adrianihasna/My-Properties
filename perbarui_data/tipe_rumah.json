@@ -50,7 +50,7 @@
             "harga" : "490_000_000",
             "luasbangunan" : "45",
             "luastanah" : "119", 
-            "fasilitas" : "2 kamar tidue, 1 kamar mandi, garasi",
+            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
             "lokasi" : "Kartasura, Solo Barat"
         },
         "452" : {
@@ -70,11 +70,11 @@
     },
     "TIPE 54" : {
         "541" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "565_000_000",
+            "luasbangunan" : "54",
+            "luastanah" : "117", 
+            "fasilitas" : "3 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi" : "Kalasan, Sleman"
         },
         "542" : {
             "harga" : "420_000_000",
@@ -84,11 +84,11 @@
             "lokasi" : "Sukoharjo"
         },
         "543" : {
-            "harga" : "1_600_000_000",
+            "harga" : "560_000_000",
             "luasbangunan" : "54",
             "luastanah" : "174", 
-            "fasilitas" : "3 kamar tidur, 2 kamar mandi, garasi ",
-            "lokasi" : "Laweyan, Solo"
+            "fasilitas" : "3 kamar tidur, 1 kamar mandi, taman ",
+            "lokasi" : "Kalasan, Sleman"
         }
     },
     "TIPE 60" : {
@@ -107,57 +107,57 @@
             "lokasi" : "Banjarsari, Surakarta"
         },
         "603" : {
-            "harga" : "359_000_000",
+            "harga" : "730_000_000",
             "luasbangunan" : "60",
-            "luastanah" : "72", 
-            "fasilitas" : "2 kamar mandi,1 kamar mandi, garasi, taman",
+            "luastanah" : "116", 
+            "fasilitas" : "2 kamar tidur,1 kamar mandi, garasi, taman",
             "lokasi" : "Laweyan, Surakarta"
         }
     },
     "TIPE 70" : {
         "701" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "725_000_000",
+            "luasbangunan" : "70",
+            "luastanah" : "95", 
+            "fasilitas" : "3 kamar tidur, 2 kamar mandi, garasi",
+            "lokasi" : "Jebres, Surakarta"
         },
         "702" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "525_000_000",
+            "luasbangunan" : "70",
+            "luastanah" : "70", 
+            "fasilitas" : "3 kamar tidur, 1 kamar mandi, garasi, taman",
+            "lokasi" : "Grogol, Solo"
         },
         "703" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "550_000_000",
+            "luasbangunan" : "70",
+            "luastanah" : "72", 
+            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi" : "Banjarsari, Solo"
         }
     },
     "TIPE 120" : {
         "1201" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "1_200_000_000",
+            "luasbangunan" : "120",
+            "luastanah" : "160", 
+            "fasilitas" : "4 kamar tidur, 3 kamar mandi, garasi",
+            "lokasi" : "Jajar, Solo"
         },
         "1202" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "999_000_000",
+            "luasbangunan" : "120",
+            "luastanah" : "168", 
+            "fasilitas" : "3 kamar tidur, 2 kamar mandi, garasi, taman",
+            "lokasi" : "Mojosongo, Solo"
         },
         "1203" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+            "harga" : "1_000_000_000",
+            "luasbangunan" : "120",
+            "luastanah" : "108", 
+            "fasilitas" : "4 kamar tidur, 2 kamar mandi, garasi",
+            "lokasi" : "Banjarsari, Solo"
         }
     }
 }
