@@ -466,4 +466,3 @@ def kuitansi_kredit():
 
                    ''')
 
-beli()
