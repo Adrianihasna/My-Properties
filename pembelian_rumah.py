@@ -1,10 +1,25 @@
 import os
 from tabulate import tabulate
 import datetime
+import json
 
-def beli() :
+
+def beli():
+    os.system('cls') 
     data_harga()
-    os.system('cls')    
+    global D
+    global i
+    global j
+    global kode 
+    
+    try:
+        with open("perbarui_data\\tipe_rumah.json", "r") as file:
+            datarumah = json.load(file)
+    except FileNotFoundError:
+        datarumah = {}
+    D = datarumah
+    kode = []
+    
     print('''
     Pilihan Range Harga :
 
@@ -14,175 +29,298 @@ def beli() :
     [4] >1.000.000.000
     [5] Keluar
     ''')
-    tipe = input('Masukkan Pilihan Range = ')
+    tipe = input('Masukkan Pilihan = ')
     if tipe == '1' :
         os.system('cls') 
         print('\nRumah Dengan Range 0 - 300.000.000 : ')
-        tipe21()
+        for i in D :
+            for j in D[i] :
+                if int(D[i][j]['harga']) <= r1 :
+                    kode.append(j)
+                    print(f'''
+~~~~~~~~~~~~~~~ {i} ~~~~~~~~~~~~~~~
+Kode Rumah  : {j}
+Harga           : {D[i][j]['harga']}
+Luas Bangunan   : {D[i][j]['luasbangunan']}
+Luas Tanah      : {D[i][j]['luastanah']}
+Fasilitas       : {D[i][j]['fasilitas']}
+Lokasi          : {D[i][j]['lokasi']}
+            
+            ''')
+        pembelian = input('Lakukan Pembelian (y/n) = ')
+        pembelian = pembelian.lower()
+        if pembelian == "y":  
+            belitipe1()
+        else :
+            beli()
+
     elif tipe == '2' :
         os.system('cls') 
         print('\nRumah Dengan Range 300.000.000 - 600.000.000 : ')
-        tipe36()
+        for i in D :
+            for j in D[i] :
+                if int(D[i][j]['harga']) in range(r1,r2) :
+                    kode.append(j)
+                    print(f'''
+~~~~~~~~~~~~~~~ {i} ~~~~~~~~~~~~~~~
+Kode Rumah  : {j}
+Harga           : {D[i][j]['harga']}
+Luas Bangunan   : {D[i][j]['luasbangunan']}
+Luas Tanah      : {D[i][j]['luastanah']}
+Fasilitas       : {D[i][j]['fasilitas']}
+Lokasi          : {D[i][j]['lokasi']}
+            
+            ''')
+        pembelian = input('Lakukan Pembelian (y/n) = ')
+        pembelian = pembelian.lower()
+        if pembelian == "y":  
+            belitipe2()
+        else :
+            beli()
+                    
     elif tipe == '3' :
         os.system('cls') 
         print('\nRumah Dengan Range 600.000.000 - 1.000.000.000 : ')
-        tipe45()
-        tipe54()
+        for i in D :
+            for j in D[i] :
+                if int(D[i][j]['harga']) in range(r2,r3+1) :
+                    kode.append(j)
+                    print(f'''
+~~~~~~~~~~~~~~~ {i} ~~~~~~~~~~~~~~~
+Kode Rumah  : {j}
+Harga           : {D[i][j]['harga']}
+Luas Bangunan   : {D[i][j]['luasbangunan']}
+Luas Tanah      : {D[i][j]['luastanah']}
+Fasilitas       : {D[i][j]['fasilitas']}
+Lokasi          : {D[i][j]['lokasi']}
+            
+            ''')
+        pembelian = input('Lakukan Pembelian (y/n) = ')
+        pembelian = pembelian.lower()
+        if pembelian == "y":  
+            belitipe3()
+        else :
+            beli()
+
     elif tipe == '4' :
         os.system('cls') 
         print('\nRumah Dengan Range lebih dari 1.000.000.000 : ')
-        tipe60()
-        tipe70()
-        tipe120()
+        for i in D :
+            for j in D[i] :
+                if int(D[i][j]['harga']) > r3 :
+                    kode.append(j)
+                    print(f'''
+~~~~~~~~~~~~~~~ {i} ~~~~~~~~~~~~~~~
+Kode Rumah  : {j}
+Harga           : {D[i][j]['harga']}
+Luas Bangunan   : {D[i][j]['luasbangunan']}
+Luas Tanah      : {D[i][j]['luastanah']}
+Fasilitas       : {D[i][j]['fasilitas']}
+Lokasi          : {D[i][j]['lokasi']}
+            
+            ''')
+        pembelian = input('Lakukan Pembelian (y/n) = ')
+        pembelian = pembelian.lower()
+        if pembelian == "y":  
+            belitipe4()
+        else :
+            beli()
+
     elif tipe == '5':
         return()
     else :
         beli()
 
-    pembelian = input('Lakukan Pembelian (y/n) = ')
-    pembelian = pembelian.lower()
-    if pembelian == "y":
-        def beli_tipe_rumah():
-            global tipe_rumah
-            global harga_tipe_rumah
-            print('''
-            TIPE RUMAH :
 
-            [1] TIPE 21
-            [2] TIPE 36
-            [3] TIPE 45
-            [4] TIPE 54
-            [5] TIPE 60
-            [6] TIPE 70
-            [7] TIPE 120
+def belitipe1():  
+    global pilih_kode
+    global p   
+    global harga
 
-            ''')
-            pilih_tipe = input('Masukkan Tipe Rumah yang ingin Dibeli = ')
-            if pilih_tipe == '1' :
-                harga_tipe_rumah = Tipe_21
-                tipe_rumah = 'Tipe 21'
-                metode_pembayaran()
-            elif pilih_tipe == '2' :
-                harga_tipe_rumah = Tipe_36
-                tipe_rumah = 'Tipe 36'
-                metode_pembayaran()
-            elif pilih_tipe == '3' :
-                harga_tipe_rumah = Tipe_45
-                tipe_rumah = 'Tipe 45'
-                metode_pembayaran()
-            elif pilih_tipe == '4' : 
-                harga_tipe_rumah = Tipe_54
-                tipe_rumah = 'Tipe 54'
-                metode_pembayaran()
-            elif pilih_tipe == '5' : 
-                harga_tipe_rumah = Tipe_60
-                tipe_rumah = 'Tipe 60'
-                metode_pembayaran()
-            elif pilih_tipe == '6' : 
-                harga_tipe_rumah = Tipe_70
-                tipe_rumah = 'Tipe 70'
-                metode_pembayaran()
-            elif pilih_tipe == '7' :
-                harga_tipe_rumah = Tipe_120
-                tipe_rumah = 'Tipe 120'
-                metode_pembayaran()
-            else :
-                print('**Tipe Rumah Tidak Tersedia**')
-                beli_tipe_rumah()
-        beli_tipe_rumah()
-    else:
-       beli()
-
-
-def tipe21():
-    data_harga()
-    print(f'''
-~~~~~~~~~~~~~~~ TIPE 21 ~~~~~~~~~~~~~~~
-Harga           = {Tipe_21}
-Luas Bangunan   = 21 m^2
-Luas Tanah      = 50 m^2
-Fasilitas       = "1 kamar tidur, 1 kamar mandi, ruang tamu, dapur"
-
+    print('''
+        Pilih Tipe :
+        [1] TIPE 21
+        [2] TIPE 36
     ''')
+    tipe1 = input('Masukkan Pilihan = ')
+    if tipe1 == '1' :
+        p = 'TIPE 21'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe1()
+    elif tipe1 == '2' :
+        p = 'TIPE 36'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe1()
+    else :
+        print('**Mohon Masukkan Kode Sesuai daftar ')
+        belitipe1()
 
-def tipe36():
-    data_harga()
-    print(f'''
-~~~~~~~~~~~~~~~ TIPE 36 ~~~~~~~~~~~~~~~
-Harga           = {Tipe_36}
-Luas Bangunan   = 31 m^2
-Luas Tanah      = 70 m^2
-Fasilitas       = "2 kamar tidur, 1 kamar mandi, ruang tamu, ruang makan, dapur, carport"     
 
+def belitipe2():  
+    global pilih_kode
+    global p   
+    global harga
+
+    print('''
+        Pilih Tipe :
+        [1] TIPE 45
+        [2] TIPE 54
+        [3] TIPE 60
+        [4] TIPE 70
     ''')
+    tipe1 = input('Masukkan Pilihan = ')
+    if tipe1 == '1' :
+        p = 'TIPE 45'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe2()
+    elif tipe1 == '2' :
+        p = 'TIPE 54'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe2()
+    elif tipe1 == '3' :
+        p = 'TIPE 60'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe2()
+    elif tipe1 == '4' :
+        p = 'TIPE 70'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe2()
+    else :
+        print('**Mohon Masukkan Kode Sesuai daftar ')
+        belitipe2()
 
-def tipe45():
-    data_harga()
-    print(f'''
-~~~~~~~~~~~~~~~ TIPE 45 ~~~~~~~~~~~~~~~
-Harga           = {Tipe_45}
-Luas Bangunan   = 45 m^2
-Luas Tanah      = 90 m^2
-Fasilitas       = "2 kamar tidur, 1 kamar mandi, ruang tamu, ruang makan, dapur, carport"
-          
+
+def belitipe3():  
+    global pilih_kode
+    global p   
+    global harga
+
+    print('''
+        Pilih Tipe :
+        [1] TIPE 60
+        [2] TIPE 70
+        [3] TIPE 120
     ''')
+    tipe1 = input('Masukkan Pilihan = ')
+    if tipe1 == '1' :
+        p = 'TIPE 60'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe3()
+    elif tipe1 == '2' :
+        p = 'TIPE 70'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe3()
+    elif tipe1 == '3' :
+        p = 'TIPE 120'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe3()
+    else :
+        print('**Mohon Masukkan Kode Sesuai daftar ')
+        belitipe3()
 
-def tipe54():
-    data_harga()
-    print(f'''
-~~~~~~~~~~~~~~~ TIPE 54 ~~~~~~~~~~~~~~~
-Harga           = {Tipe_54}
-Luas Bangunan   = 54 m^2
-Luas Tanah      = 120 m^2
-Fasilitas       = "3 kamar tidur, 2 kamar mandi, ruang tamu, ruang makan, dapur, carport"
 
+def belitipe4():  
+    global pilih_kode
+    global p   
+    global harga
+
+    print('''
+        Pilih Tipe :
+        [1] TIPE 120
     ''')
-
-def tipe60():
-    data_harga()
-    print(f'''
-~~~~~~~~~~~~~~~ TIPE 60 ~~~~~~~~~~~~~~~
-Harga           = {Tipe_60}
-Luas Bangunan   = 60 m^2
-Luas Tanah      = 130 m^2
-Fasilitas       = "3 kamar tidur, 2 kamar mandi, ruang tamu, ruang makan, dan dapur, carport"          
-          
-    ''')
-
-def tipe70():
-    data_harga()
-    print(f'''
-~~~~~~~~~~~~~~~ TIPE 70 ~~~~~~~~~~~~~~~
-Harga           = {Tipe_70}
-Luas Bangunan   = 70 m^2
-Luas Tanah      = 140 m^2
-Fasilitas       = "3 kamar tidur, 3 kamar mandi, ruang tamu, ruang makan, dapur, taman, carport"          
-          
-    ''')
-
-def tipe120():
-    data_harga()
-    print(f'''
-~~~~~~~~~~~~~~~ TIPE 120 ~~~~~~~~~~~~~~~
-Harga           = {Tipe_120}
-Luas Bangunan   = 120 m^2
-Luas Tanah      = 160 m^2
-Fasilitas       = "4 kamar tidur, 4 kamar mandi, ruang tamu, ruang makan, dapur, taman, carport"          
-          
-    ''')
+    tipe1 = input('Masukkan Pilihan = ')
+    if tipe1 == '1' :
+        p = 'TIPE 120'
+        pilih_kode = input('Masukkan Kode Rumah Yang Tersedia = ')
+        if pilih_kode in kode :
+            harga = D[p][pilih_kode]['harga']
+            delete_ts(D)
+            metode_pembayaran()
+        else :
+            print('**Mohon Masukkan Kode Sesuai daftar ')
+            belitipe4()
+    else :
+        print('**Mohon Masukkan Kode Sesuai daftar ')
+        belitipe4()
 
 
-def hitung_biaya_pajak(): 
-    data_harga()
+def delete_ts(obj):
+    if isinstance(obj, list):
+        for i in obj:
+            delete_ts(i)
+    elif isinstance(obj, dict):
+        if pilih_kode in obj:
+            del obj[pilih_kode]
+        for key in obj:
+            delete_ts(obj[key])
+    with open("perbarui_data\\tipe_rumah.json", "w") as file:
+        json.dump(obj, file, indent=4, )
+
+
+def pajak():
     global biaya_pajak
-    biaya_pajak = harga_tipe_rumah * 1.11
+    biaya_pajak = int(harga) * 1.11 // 1
+
 
 def metode_pembayaran():
     global total_bayar
     global pembayaran
-    hitung_biaya_pajak()
     data_harga()
-
+    pajak()
     print('''
 ~~~~~~~~~~ METODE PEMBAYARAN ~~~~~~~~~~
 [1] CASH
@@ -192,70 +330,69 @@ def metode_pembayaran():
     metode = input('\nMasukkan Pilihan Metode Pembayaran = ')
     if metode == '1' :
         pembayaran = 'Tunai'
-        total_bayar = biaya_pajak + (notaris * harga_tipe_rumah) + PNBP + provisi
+        total_bayar = biaya_pajak + (notaris * int(harga)) + PNBP + provisi
         print()
         print(f'Total Biaya yang Harus Anda Bayar = {total_bayar}')
         print('Rincian : ')
         print(f'Harga Rumah dan Pajak \t= {biaya_pajak}')
-        print(f'Biaya Notaris         \t= {notaris*harga_tipe_rumah}')
+        print(f'Biaya Notaris         \t= {notaris*int(harga)}')
         print(f'Biaya PNBP            \t= {PNBP}')
         print(f'Biaya Provisi         \t= {provisi}')
         print()
         kuitansi_tunai()
     elif metode == '2' :
-        def bayar_kredit():
+        bayar_kredit()
+    else :
+        metode_pembayaran()   
+
+
+def data_harga():
+    global r1
+    global r2
+    global r3
+    global bunga
+    global notaris
+    global PNBP
+    global provisi 
+
+    r1 = 300_000_000
+    r2 = 600_000_000
+    r3 = 1_000_000_000
+    bunga = 0.05
+    notaris = 0.01 
+    PNBP = 650_000
+    provisi = 1_500_000
+
+
+def bayar_kredit():
             global hutang
-            global dp
             global pembayaran
             global total_bayar
             global cicilan_bunga
             global waktu
+            global dp
+
+            dp = .15*int(harga)//1
             try:
-                dp = int(input('Masukkan uang muka yang ingin dibayarkan = '))
-                waktu = float(input('Masukkan Jangka waktu dalam tahun = '))
+                waktu = float(input('Masukkan jangka waktu dalam tahun = '))
             except ValueError :
                 print('**Mohon Masukkan Dalam Bentuk Angka**')
                 bayar_kredit()
             else :
                 if waktu == 0 :
                     pembayaran = 'Tunai'
-                    total_bayar = (biaya_pajak + (notaris * harga_tipe_rumah) + PNBP + provisi) - dp
+                    total_bayar = (biaya_pajak + (notaris * int(harga)) + PNBP + provisi) - dp //1
                     kuitansi_tunai()
-                else :
+                elif waktu > 0 and waktu <=15 : 
                     pembayaran = 'Kredit'
-                    hutang = (biaya_pajak + (notaris * harga_tipe_rumah) + PNBP + provisi) - dp
-                    cicilan_bunga = ((bunga*hutang)*waktu)//(waktu*12)
-                    total_bayar = hutang//(12*waktu) + cicilan_bunga
+                    hutang = (biaya_pajak + (notaris * int(harga)) + PNBP + provisi) - dp //1
+                    cicilan_bunga = ((bunga*hutang)*waktu)//(waktu*12) //1
+                    total_bayar = hutang//(12*waktu) + cicilan_bunga //1
                     kuitansi_kredit()
-        bayar_kredit()
-    else :
-        metode_pembayaran()     
-    return
+                else :
+                    print('**Waktu kredit maksimal adalah 15 tahun**')
+                    bayar_kredit()
 
-def data_harga() :
-    global bunga
-    global notaris
-    global PNBP
-    global provisi 
-    global Tipe_21
-    global Tipe_36
-    global Tipe_45
-    global Tipe_54
-    global Tipe_60
-    global Tipe_70
-    global Tipe_120
-
-    bunga = 0.05
-    notaris = 0.01 
-    PNBP = 650_000
-    provisi = 1_500_000
-    Tipe_21 = 250_000_000
-    Tipe_36 = 500_000_000
-    Tipe_45 = 700_000_000
-    Tipe_54 = 900_000_000
-    Tipe_60 = 1_000_000_000
-    Tipe_70 = 1_300_000_000
-    Tipe_120 = 1_500_000_000
 
 def kuitansi_tunai():
     nama = input("Masukkan nama: ")
@@ -271,7 +408,7 @@ def kuitansi_tunai():
     NAMA                : {nama}
     ALAMAT              : {alamat}
     NO. HP              : {nomor_hp}
-    TIPE RUMAH          : {tipe_rumah}
+    TIPE RUMAH          : {p}
     TOTAL BAYAR         : {total_bayar}
     METODE PEMBAYARAN   : {pembayaran}
                    
@@ -284,11 +421,12 @@ def kuitansi_tunai():
     NAMA                : {nama}
     ALAMAT              : {alamat}
     NO. HP              : {nomor_hp}
-    TIPE RUMAH          : {tipe_rumah}
+    TIPE RUMAH          : {p}
     TOTAL BAYAR         : {total_bayar}
     METODE PEMBAYARAN   : {pembayaran}
                    ''')
  
+
 def kuitansi_kredit():
     nama = input("Masukkan nama: ")
     alamat = input("Masukkan alamat: ")
@@ -303,7 +441,7 @@ def kuitansi_kredit():
     NAMA                : {nama}
     ALAMAT              : {alamat}
     NO. HP              : {nomor_hp}
-    TIPE RUMAH          : {tipe_rumah}
+    TIPE RUMAH          : {p}
     UANG MUKA           : {dp}
     METODE PEMBAYARAN   : {pembayaran}
     CICILAN TIAP BULAN  : {total_bayar}
@@ -319,7 +457,7 @@ def kuitansi_kredit():
     NAMA                : {nama}
     ALAMAT              : {alamat}
     NO. HP              : {nomor_hp}
-    TIPE RUMAH          : {tipe_rumah}
+    TIPE RUMAH          : {p}
     UANG MUKA           : {dp}
     METODE PEMBAYARAN   : {pembayaran}
     CICILAN TIAP BULAN  : {total_bayar}
@@ -327,3 +465,5 @@ def kuitansi_kredit():
     JANGKA WAKTU        : {waktu} Tahun
 
                    ''')
+
+beli()
