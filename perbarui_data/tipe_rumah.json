@@ -1,163 +1,156 @@
 {
-    "TIPE 21" : {
-        "211" : {
-            "harga" : "183_000_000",
-            "luasbangunan" : "21",
-            "luastanah" : "62", 
-            "fasilitas" : "1 kamar tidur, 1 kamar mandi, taman",
-            "lokasi" : "Prambanan"
+    "TIPE 21": {
+        "211": {
+            "harga": "183_000_000",
+            "luasbangunan": "21",
+            "luastanah": "62",
+            "fasilitas": "1 kamar tidur, 1 kamar mandi, taman",
+            "lokasi": "Prambanan"
         },
-        "212" : {
-            "harga" : "190_000_000",
-            "luasbangunan" : "21",
-            "luastanah" : "61", 
-            "fasilitas" : "1 kamar tidur, 1 kamar mandi, garasi, taman",
-            "lokasi" : "Klaten Utara, Klaten"
-        },
-        "213" : {
-            "harga" : "",
-            "luasbangunan" : "",
-            "luastanah" : "", 
-            "fasilitas" : "",
-            "lokasi" : ""
+        "212": {
+            "harga": "190_000_000",
+            "luasbangunan": "21",
+            "luastanah": "61",
+            "fasilitas": "1 kamar tidur, 1 kamar mandi, garasi, taman",
+            "lokasi": "Klaten Utara, Klaten"
         }
     },
-    "TIPE 36" : {
-        "361" : {
-            "harga" : "295_000_000",
-            "luasbangunan" : "36",
-            "luastanah" : "72", 
-            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
-            "lokasi" : "Kudu, Solo Baru"
+    "TIPE 36": {
+        "361": {
+            "harga": "295_000_000",
+            "luasbangunan": "36",
+            "luastanah": "72",
+            "fasilitas": "2 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi": "Kudu, Solo Baru"
         },
-        "362" : {
-            "harga" : "245_000_000",
-            "luasbangunan" : "36",
-            "luastanah" : "60", 
-            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
-            "lokasi" : "Gentan, Sukoharjo"
+        "362": {
+            "harga": "245_000_000",
+            "luasbangunan": "36",
+            "luastanah": "60",
+            "fasilitas": "2 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi": "Gentan, Sukoharjo"
         },
-        "363" : {
-            "harga" : "260_200_000",
-            "luasbangunan" : "36",
-            "luastanah" : "65", 
-            "fasilitas" : "2 kamar tidur, 1 kamar mandi,taman,",
-            "lokasi" : "Baki, Sukoharjo"
-        }     
-    }, 
-    "TIPE 45" : {
-        "451" : {
-            "harga" : "490_000_000",
-            "luasbangunan" : "45",
-            "luastanah" : "119", 
-            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
-            "lokasi" : "Kartasura, Solo Barat"
-        },
-        "452" : {
-            "harga" : "425_000_000",
-            "luasbangunan" : "45",
-            "luastanah" : "72", 
-            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi, taman, dapur",
-            "lokasi" : "Gedangan, Solo Baru"
-        },
-        "453" : {
-            "harga" : "385_000_000",
-            "luasbangunan" : "45",
-            "luastanah" : "20", 
-            "fasilitas" : "2 kamar tidur, 1 kamar mandi, taman",
-            "lokasi" : "Solo Baru"
+        "363": {
+            "harga": "260_200_000",
+            "luasbangunan": "36",
+            "luastanah": "65",
+            "fasilitas": "2 kamar tidur, 1 kamar mandi,taman,",
+            "lokasi": "Baki, Sukoharjo"
         }
     },
-    "TIPE 54" : {
-        "541" : {
-            "harga" : "565_000_000",
-            "luasbangunan" : "54",
-            "luastanah" : "117", 
-            "fasilitas" : "3 kamar tidur, 1 kamar mandi, garasi",
-            "lokasi" : "Kalasan, Sleman"
+    "TIPE 45": {
+        "451": {
+            "harga": "490_000_000",
+            "luasbangunan": "45",
+            "luastanah": "119",
+            "fasilitas": "2 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi": "Kartasura, Solo Barat"
         },
-        "542" : {
-            "harga" : "420_000_000",
-            "luasbangunan" : "54",
-            "luastanah" : "90", 
-            "fasilitas" : "2 kamar tidur, 1 kamar mandi, taman",
-            "lokasi" : "Sukoharjo"
+        "452": {
+            "harga": "425_000_000",
+            "luasbangunan": "45",
+            "luastanah": "72",
+            "fasilitas": "2 kamar tidur, 1 kamar mandi, garasi, taman, dapur",
+            "lokasi": "Gedangan, Solo Baru"
         },
-        "543" : {
-            "harga" : "560_000_000",
-            "luasbangunan" : "54",
-            "luastanah" : "174", 
-            "fasilitas" : "3 kamar tidur, 1 kamar mandi, taman ",
-            "lokasi" : "Kalasan, Sleman"
+        "453": {
+            "harga": "385_000_000",
+            "luasbangunan": "45",
+            "luastanah": "20",
+            "fasilitas": "2 kamar tidur, 1 kamar mandi, taman",
+            "lokasi": "Solo Baru"
         }
     },
-    "TIPE 60" : {
-        "601" : {
-            "harga" : "825_000_000",
-            "luasbangunan" : "60",
-            "luastanah" : "60", 
-            "fasilitas" : "3 kamar tidur, 2 kamar mandi, garasi, taman",
-            "lokasi" : "Solo Baru, Surakarta"
+    "TIPE 54": {
+        "541": {
+            "harga": "565_000_000",
+            "luasbangunan": "54",
+            "luastanah": "117",
+            "fasilitas": "3 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi": "Kalasan, Sleman"
         },
-        "602" : {
-            "harga" : "575_000_000",
-            "luasbangunan" : "60",
-            "luastanah" : "105", 
-            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
-            "lokasi" : "Banjarsari, Surakarta"
+        "542": {
+            "harga": "420_000_000",
+            "luasbangunan": "54",
+            "luastanah": "90",
+            "fasilitas": "2 kamar tidur, 1 kamar mandi, taman",
+            "lokasi": "Sukoharjo"
         },
-        "603" : {
-            "harga" : "730_000_000",
-            "luasbangunan" : "60",
-            "luastanah" : "116", 
-            "fasilitas" : "2 kamar tidur,1 kamar mandi, garasi, taman",
-            "lokasi" : "Laweyan, Surakarta"
+        "543": {
+            "harga": "560_000_000",
+            "luasbangunan": "54",
+            "luastanah": "174",
+            "fasilitas": "3 kamar tidur, 1 kamar mandi, taman ",
+            "lokasi": "Kalasan, Sleman"
         }
     },
-    "TIPE 70" : {
-        "701" : {
-            "harga" : "725_000_000",
-            "luasbangunan" : "70",
-            "luastanah" : "95", 
-            "fasilitas" : "3 kamar tidur, 2 kamar mandi, garasi",
-            "lokasi" : "Jebres, Surakarta"
+    "TIPE 60": {
+        "601": {
+            "harga": "825_000_000",
+            "luasbangunan": "60",
+            "luastanah": "60",
+            "fasilitas": "3 kamar tidur, 2 kamar mandi, garasi, taman",
+            "lokasi": "Solo Baru, Surakarta"
         },
-        "702" : {
-            "harga" : "525_000_000",
-            "luasbangunan" : "70",
-            "luastanah" : "70", 
-            "fasilitas" : "3 kamar tidur, 1 kamar mandi, garasi, taman",
-            "lokasi" : "Grogol, Solo"
+        "602": {
+            "harga": "575_000_000",
+            "luasbangunan": "60",
+            "luastanah": "105",
+            "fasilitas": "2 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi": "Banjarsari, Surakarta"
         },
-        "703" : {
-            "harga" : "550_000_000",
-            "luasbangunan" : "70",
-            "luastanah" : "72", 
-            "fasilitas" : "2 kamar tidur, 1 kamar mandi, garasi",
-            "lokasi" : "Banjarsari, Solo"
+        "603": {
+            "harga": "730_000_000",
+            "luasbangunan": "60",
+            "luastanah": "116",
+            "fasilitas": "2 kamar tidur,1 kamar mandi, garasi, taman",
+            "lokasi": "Laweyan, Surakarta"
         }
     },
-    "TIPE 120" : {
-        "1201" : {
-            "harga" : "1_200_000_000",
-            "luasbangunan" : "120",
-            "luastanah" : "160", 
-            "fasilitas" : "4 kamar tidur, 3 kamar mandi, garasi",
-            "lokasi" : "Jajar, Solo"
+    "TIPE 70": {
+        "701": {
+            "harga": "725_000_000",
+            "luasbangunan": "70",
+            "luastanah": "95",
+            "fasilitas": "3 kamar tidur, 2 kamar mandi, garasi",
+            "lokasi": "Jebres, Surakarta"
         },
-        "1202" : {
-            "harga" : "999_000_000",
-            "luasbangunan" : "120",
-            "luastanah" : "168", 
-            "fasilitas" : "3 kamar tidur, 2 kamar mandi, garasi, taman",
-            "lokasi" : "Mojosongo, Solo"
+        "702": {
+            "harga": "525_000_000",
+            "luasbangunan": "70",
+            "luastanah": "70",
+            "fasilitas": "3 kamar tidur, 1 kamar mandi, garasi, taman",
+            "lokasi": "Grogol, Solo"
         },
-        "1203" : {
-            "harga" : "1_000_000_000",
-            "luasbangunan" : "120",
-            "luastanah" : "108", 
-            "fasilitas" : "4 kamar tidur, 2 kamar mandi, garasi",
-            "lokasi" : "Banjarsari, Solo"
+        "703": {
+            "harga": "550_000_000",
+            "luasbangunan": "70",
+            "luastanah": "72",
+            "fasilitas": "2 kamar tidur, 1 kamar mandi, garasi",
+            "lokasi": "Banjarsari, Solo"
+        }
+    },
+    "TIPE 120": {
+        "1201": {
+            "harga": "1_200_000_000",
+            "luasbangunan": "120",
+            "luastanah": "160",
+            "fasilitas": "4 kamar tidur, 3 kamar mandi, garasi",
+            "lokasi": "Jajar, Solo"
+        },
+        "1202": {
+            "harga": "999_000_000",
+            "luasbangunan": "120",
+            "luastanah": "168",
+            "fasilitas": "3 kamar tidur, 2 kamar mandi, garasi, taman",
+            "lokasi": "Mojosongo, Solo"
+        },
+        "1203": {
+            "harga": "1_000_000_000",
+            "luasbangunan": "120",
+            "luastanah": "108",
+            "fasilitas": "4 kamar tidur, 2 kamar mandi, garasi",
+            "lokasi": "Banjarsari, Solo"
         }
     }
 }

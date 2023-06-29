@@ -218,8 +218,8 @@ def tambah_rumah():
     except FileNotFoundError:
         datarumah = {}
     
-    pilih_tipe = input('Masukkan Pilihan  = ')
     jumlah = 0
+    pilih_tipe = input('Masukkan Pilihan  = ')
     if pilih_tipe == '1' :
         tipe = "TIPE 21"
         kodetipe = 21
@@ -255,7 +255,6 @@ def tambah_rumah():
 
     for jumlah in range(len(datarumah[tipe])):
         jumlah += 1
-        print(jumlah)
 
     while True : 
         try : 
@@ -282,8 +281,15 @@ def tambah_rumah():
     lokasi = input('Masukkan Lokasi Rumah = ')
 
     data_baru = {
-        (f'{kodetipe}{(jumlah+1)}')
+        (f'{kodetipe}{(jumlah+1)}') : {
+            "harga" : str(hargarumah),
+            "luasbangunan" : str(luasbangunan),
+            "luastanah" : str(luastanah), 
+            "fasilitas" : fasilitas,
+            "lokasi" : lokasi
+        }
     }
-    print(data_baru)
-tambah_rumah()
+    datarumah[tipe].update(data_baru)
+    with open("perbarui_data\\tipe_rumah.json", "w") as file:
+        json.dump(datarumah, file, indent=4, )
 
